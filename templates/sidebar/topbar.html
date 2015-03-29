@@ -1,0 +1,41 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load menu_tags %}
+{% load cms_tags %}
+
+<div class='theme-text container-fluid' style='text-align:center;' id='topbar'>
+	<div class='col-sm-4'>
+		<div class="panel-group" id="topbar-contact" role="tablist" aria-multiselectable="true">
+			<div>
+				<div role="tab" style='margin: 18px auto 0;' id="headingOne">
+					<a class="btn btn-danger" style="width: 210px; padding: 13px 0" data-toggle="collapse" data-parent="#topbar-contact" href="#topbar-contact-1" aria-expanded="false" aria-controls="collapseOne">
+						Schedule Free Estimate
+					</a>
+				</div>
+				<div id="topbar-contact-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						{% static_placeholder 'quick-contact' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='col-sm-4' style='text-align:center;'>
+			<div class="fb-like" data-href="{{ fb_fan_page_url }}" data-layout="box_count" data-action="like" data-share="true" data-show-faces="true" data-ref="topbar_{% page_attribute 'slug' %}"></div>
+			<div class="g-plusone" data-size="tall" data-href="https://plus.google.com/u/0/b/101072122455137245100/101072122455137245100"></div>
+			<div class="g-plus" data-action="share" data-annotation="none"></div>
+	</div>
+	<div class='col-sm-4' style='text-align:center;margin-top:10px;'>
+		<div style='font-size:16px;'>For service and immediate attention:</div>
+		<a id='call' class='btn btn-primary' href='tel:{{ company_phone_link }}'>Tap to Call</a>
+        <div id='phone' style='font-size:18px; text-align:center; width: auto; margin-bottom: 10px;color: #115895;'>CALL&nbsp;&nbsp;<span style='font-size:24px;'>{{ company_phone_text }}</span></div>
+	</div>
+	{% comment %}
+        <div id='topbar_contact'>
+            <a id='call' class='btn btn-primary' href='tel:{{ company_phone_link }}'>Call</a>
+            <h4 id='phone' style='font-size:16px; text-align:center; width: auto; margin-bottom: 8px;'>{{ company_phone_text }}</h4>
+            <h4 style='margin:0; font-size:16px; color:#333!important'>{% include 'misc_pages/email.html' %}</h4>
+        </div>
+        <div id='topbar_fb' class="fb-like" data-share="true" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true"></div>
+    {% endcomment %}
+</div>

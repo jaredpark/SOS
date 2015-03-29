@@ -1,0 +1,16 @@
+{% extends 'cms/base.html' %}
+
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+	<div class='row page_content container-fluid'>
+		<div class='theme-text'>
+			<div class='row' style='height:20px;'></div>
+			{% block page_content_block %}
+			{% placeholder 'page_content' %}
+			{% endblock page_content_block %}
+		</div>
+	</div>
+	{% include 'sidebar/page_bottom.html' %}
+{% endblock body_block %}

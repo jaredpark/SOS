@@ -1,0 +1,31 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load cms_tags %}
+{% load crispy_forms_tags %}
+
+{% block page_content_block %}
+{% if not profile %}
+	<h5>Please <a href='{% url 'profiles_profile_detail' user.username %}'>click here</a> to view your account</h5>
+{% else %}
+<ul style='margin-top:20px' id='account-tabs' class="nav nav-pills nav-justified" role='tablist'>
+  <li role="presentation" class='active'><a href="#tab1" id='tab1-tab' role='tab' data-toggle='tab' aria-controls='tab1' aria-expanded='false'>My Details</a></li>
+  <li role="presentation"><a href="#tab2" id='tab2-tab' role='tab' data-toggle='tab' aria-controls='tab2' aria-expanded='false'>My Account</a></li>
+</ul>
+<div id='account-tab-content' class='tab-content'>
+	<div role='tabpanel' class='tab-pane fade in active' id='tab1' aria-labelledby='tab1-tab'>
+		<h4 style='text-align:center;'>{{ profile.user.username }}'s profile</h4>
+		{% include 'myProfiles/account_overview_table.html' %}
+		<a class='btn btn-primary' href='{% url 'profiles_edit_profile' %}' style='float:left; margin-right:20px;'>Edit Your Profile</a>
+		<a class='btn btn-default' href="{% url 'auth_logout' %}?next={% page_url 'home' %}" style='margin: 0;'>Log Out</a>
+
+	</div>
+	<div role='tabpanel' class='tab-pane fade' id='tab2' aria-labelledby='tab2-tab'>
+		<h4 style='text-align:center;'>{{ profile.user.username }}'s account information</h4>
+		{% include 'myProfiles/account_log_table.html' %}
+	</div>
+</div>
+<row style='text-align:right; padding-top:40px;'>
+<!-- <p><a class='btn btn-xs btn-danger' href="{% url 'auth_logout' %}?next={% page_url 'home' %}" style='color:#fff'>Log Out</a></p> -->
+</row>
+{% endif %}
+{% endblock page_content_block %}

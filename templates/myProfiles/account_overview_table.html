@@ -1,0 +1,41 @@
+{% load cms_tags %}
+
+<table class='table table-hover'>
+<thead>
+	<tr>
+		<th></th>
+		<th></th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<th scorpe='row'>First Name</th>
+		<td>{{ profile.first_name }}</td>
+		{# {% render_model UserProfile "first_name" "first_name" %} #}
+	</tr>
+	<tr>
+		<th scorpe='row'>Last Name</th>
+		<td>{{ profile.last_name }}</td>
+	</tr>
+	<tr>
+		<th scorpe='row'>Phone</th>
+		<td>{{ profile.phone }}</td>
+	</tr>
+	<tr>
+		<th scorpe='row'>Email</th>
+		<td>{{ profile.email }}</td>
+	</tr>
+	<tr>
+		<th scorpe='row'>Address</th>
+		<td>{{ profile.address }}</td>
+	</tr>
+	<tr>
+		<th scorpe='row'>City</th>
+		<td>{{ profile.city }}</td>
+	</tr>
+	<tr>
+		<th scorpe='row'>Zipcode</th>
+		<td>{{ profile.zipcode }}</td>
+	</tr>
+</tbody>
+</table>

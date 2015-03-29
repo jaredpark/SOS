@@ -1,0 +1,988 @@
+.dropdown-menu {
+	min-width: 0;
+}
+
+li a p {
+	margin: 0 0;
+}
+
+.left_sidebar .form-control {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#page-tabs {
+	margin-top: 20px;
+}
+
+.custom-navbar.theme-text ul li a {
+	padding: 40px 20px 20px;
+	font-size: 1.2vw;
+}
+
+.custom-navbar.theme-text ul li a:link, .custom-navbar.theme-text ul li a:visited {
+	color: #005cb8!important;
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-decoration: none;
+}
+
+.custom-navbar.theme-text ul li a:hover, .custom-navbar.theme-text ul li a:active {
+	color: #555!important;
+	background: #f5f5f5;
+	text-decoration: none;
+}
+
+.theme-text ul:not(.nav-pills) li a:link, .theme-text ul:not(.nav-pills) li a:visited {
+	color: #005cb8!important;
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-decoration: none;
+}
+
+.theme-text ul:not(.nav-pills) li a:hover, .theme-text ul:not(.nav-pills) li a:active {
+	color: #555!important;
+	background: #f5f5f5;
+	text-decoration: none;
+}
+
+.homepage_image a:not(.btn) {
+	color: #005cb8;
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-decoration: none;
+}
+
+a.btn-default {
+	color: #555!important;
+}
+
+.navbar-toggle {
+	padding: 5px 10px;
+	background-color: #eeeeee;
+	color: #777777;
+	font-size:.8em;
+	font-family:'Libre Baskerville', Georgia, serif;
+	margin-right: 0;
+	margin-top: 10px;
+}
+
+.theme-bg {
+	background-color: #005cb8!important;
+}
+
+.homepage_content.theme-bg {
+	background-color: #005cb8!important; /*a darker shade of the actual theme color, due to surrounding colors making it appear lighter than other sections with the same bg*/
+}
+
+.theme-text {
+	/*color: #005cb8!important;*/
+	font-family:'Libre Baskerville', Georgia, serif;
+}
+
+.left_sidebar.theme-text h4 {
+	color: #333;
+}
+
+.left_sidebar.theme-text {
+	color: #333;
+}
+
+.sidebar_menu {
+	margin: 10px 0 5px;
+	text-align:left;'
+}
+
+.theme-text a {
+	font-family:'Libre Baskerville', Georgia, serif;
+	color: #005cb8;
+}
+
+.tab-pane {
+	padding: 20px 0px 0;
+}
+
+.theme-text .btn {
+	color: #fff;
+	font-family:'Libre Baskerville', Georgia, serif;
+}
+
+.theme-text ul li a {
+	color: #005cb8;
+	font-family:'Libre Baskerville', Georgia, serif;
+}
+
+ul {
+	list-style-type: none;
+	-webkit-padding-start: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.row {
+	margin: 0;
+}
+
+.page_content {
+	margin: 0;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-default {
+	border-radius: 0;
+}
+
+.container-fluid {
+	position: relative;
+	min-height: 100%;
+}
+
+.custom-navbar .custom-logo img {
+	margin: 15px 0 0 20px;
+	width: 240px;
+	max-height: 70px;
+}
+
+.custom-navbar .nav.navbar-nav {
+	margin-right:10px;
+	margin-bottom:-1px;
+}
+
+#signup_login {
+	float: left;
+	margin: 0;
+}
+
+#signup_login a {
+	float: left;
+	padding: 8px 20px;
+	font-size:1em;
+}
+
+.custom-navbar .btn {
+	display: block;
+	margin: 30px 15px 0;
+}
+
+@media (max-width:767px) {
+	
+	#signup_login, #signup_login a {
+		float: none;
+	}
+
+	.custom-navbar .btn {
+		margin: 10px 0;
+		width: 75px;
+	}
+
+	.custom-navbar #signup_login .btn:first-child {
+		float:left;
+		margin-left: 10px;
+		margin-right:20px;
+	}
+	.custom-navbar #signup_login .btn:nth-child(2) {
+		display:inline-block;
+	}
+
+	#signup_login a {
+		padding: 8px 10px;
+		font-size:.8em;
+	}
+}
+
+@media (max-width: 1050px){
+	#signup_login a {
+		font-size: .8em;
+	}
+}
+
+@media (max-width: 900px){
+	.custom-navbar .custom-logo img {
+		width: 240px;
+		margin: 15px 0 0 5px;
+	}	
+}
+
+@media (max-width: 767px){
+	.custom-navbar .custom-logo img {
+		width: 240px;
+		margin: 10px auto 5px;
+	}
+	#signup_login a {
+		font-size: .6em;
+	}	
+}
+
+@media (max-width: 480px){
+	.custom-navbar .custom-logo img {
+		width: 240px;
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 368px){
+	.custom-navbar .custom-logo img {
+		width: 160px;
+		margin-top: 15px;
+	}
+}
+
+.nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+ul li ul li {
+	padding: 0px 0;
+}
+
+.navbar-default .custom-navbar li ul li a {
+	padding: 10px 0;
+	text-align: center;
+	font-size: .85vw;
+}
+
+.navbar-default.dropdown-menu {
+	padding: 0;
+	border: 0;
+	width:100%;
+}
+
+ul li:hover ul{
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .dropdown-menu {
+		display: none;
+		position: initial;
+		z-index: 1000;
+	}
+}
+
+.carousel_container img, .image_container img {
+	max-height: 600px;
+	min-height: 120px;
+	width: 100%;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .custom-navbar ul li a {
+		padding: 10px 2.5vw 10px 2.5vw;
+		font-size:.8em;
+	}
+
+	.navbar-default .custom-navbar li ul li a {
+		padding: 10px 0 8px;
+		font-size: .6em;
+	}
+}
+
+.call-to-action-banner div {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.carousel_container, .image_container{
+	height: 100%;
+	width: 80%;
+	float: left;
+}
+
+.carousel_sidebar {
+	height: 100%;
+	width: 20%;
+	float: left;
+	background-color: #297acc;
+	position: absolute;    
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.homepage_image .filer_image {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.homepage_image .homepage_image_text {
+	position: absolute;
+	right: 2vw;
+	top: 0vw;
+	text-align: center;
+	max-width: 25%
+}
+
+@media (max-width: 900px) {
+	.homepage_image .homepage_image_text {
+		max-width: 35%
+	}
+	.carousel_container, .image_container{
+		width: 70%;
+	}
+}
+@media (max-width: 767px) {
+	.homepage_image .homepage_image_text {
+		max-width: 45%
+	}
+	.carousel_container, .image_container{
+		width: 60%;
+	}
+}
+
+.call-to-action-banner {
+	font-family:'Libre Baskerville', Georgia, serif;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.call-to-action-banner .btn {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size: 1em;
+	padding: 3px 6px 5px;
+}
+
+.homepage_image_text h3 {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size: 1.6em;
+	line-height: 2.1em;
+	margin:70px auto 0;
+	text-align: center;
+}
+
+.homepage_image_text a.btn {
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	width:80%;
+	white-space:normal;
+	margin: 0 auto 20px;
+	padding: 10px;
+}
+
+@media (max-width: 1300px) {
+	.call-to-action-banner {
+		font-size: 1.1em;
+	}
+
+	.call-to-action-banner .btn {
+		font-size: 1em;
+		padding:2px 6px 4px;
+	}
+
+	.homepage_image_text h3 {
+		font-size: 1.4em;
+		line-height: 1.8em;
+	}
+
+	.homepage_image_text a.btn {
+		font-size: 1.1em;
+		line-height: 1.5em;
+	}
+}
+
+@media (max-width: 1100px) {
+	.call-to-action-banner {
+		font-size: 1em;
+	}
+
+	.call-to-action-banner .btn {
+		font-size: .9em;
+		padding:3px 6px 5px;
+	}
+
+	.homepage_image_text h3 {
+		font-size: 1.3em;
+		line-height: 1.7em;
+		margin:60px auto 0;
+	}
+
+	.homepage_image_text a.btn {
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+}
+
+@media (max-width: 992px) { 
+
+	.call-to-action-banner {
+		font-size: .8em;
+	}
+
+	.call-to-action-banner .btn {
+		font-size: .9em;
+		padding: 3px 6px 5px;
+	}
+
+	.homepage_image_text h3 {
+		font-size: 1.2em;
+		line-height: 1.5em;
+		margin: 60px auto 0;
+	}
+
+	.homepage_image_text a.btn {
+		font-size: .9em;
+		line-height: 1.5em;
+	}
+}
+
+@media (max-width: 767px) {
+	.call-to-action-banner {
+		font-size: .7em;
+	}
+
+	.call-to-action-banner .btn {
+		font-size: 1em;
+		padding: 3px 6px 5px;
+	}
+
+	.homepage_image_text h3 {
+		font-size: 1em;
+		line-height: 1.2em;
+		margin: 45px auto 0;
+	}
+	.homepage_image_text a.btn {
+		font-size: .9em;
+		line-height: 1.2em;
+		margin: 0 auto 10px;
+	}
+}
+
+@media (max-width: 618px) {
+	
+	.homepage_image_text h3 {
+		font-size: .75em;
+		line-height: 1.2em;
+		margin: 30px auto 0;
+	}
+	.homepage_image_text a.btn {
+		font-size: .8em;
+		line-height: 1.2em;
+		margin: 0 auto 5px;
+	}
+}
+
+@media (max-width: 480px) {
+
+
+	.homepage_image_text h3 {
+		font-size: .6em;
+		line-height: 1.1em;
+		margin: 20px auto 0;
+	}
+	.homepage_image_text a.btn {
+		font-size: .9em;
+		line-height: 1.6em;
+		margin: 0 auto 5px;
+		padding: 5px 5px;
+	}
+}
+
+@media (max-width: 368px) {
+	.call-to-action-banner {
+		font-size: .7em;
+		line-height: 2.4em;
+	}
+
+	.call-to-action-banner .btn {
+		font-size: 1em;
+		padding: 3px 6px 5px;
+	}
+
+	.homepage_image_text h3 span {
+		/*display:none;*/
+	}
+	
+	.homepage_image_text h3 {
+		font-size: .5em;
+		margin: 10px auto 0;
+	}
+	.homepage_image_text h3 a.btn {
+		font-size: .8em;
+		margin: 5px auto 0px;
+	}
+}
+
+.circular {
+	width: 12em;
+	height: 12em;
+	border-radius: 7.5em;
+	-webkit-border-radius: 7.5em;
+	-moz-border-radius: 7.5em;
+}
+
+.homepage_content .theme-text a {
+	color: #ffffff;
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-align: center;
+}
+
+.homepage_content h3, .homepage_content h4, .homepage_content h5 {
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-align: center;
+}
+
+.homepage_content h3, .homepage_content h4 {
+	color: #fff;
+}
+
+.homepage_content .theme-text {
+	font-family:'Libre Baskerville', Georgia, serif;
+}
+
+.homepage_content h3, .homepage_content h4, .homepage_content h5 {
+	font-family:'Libre Baskerville', Georgia, serif;
+	text-align: center;
+}
+
+.homepage_content a {
+	text-decoration: none;
+}
+
+.homepage_content.theme-text h3 {
+	margin: 15px 0 0;
+	font-size: 2em;
+	line-height: 1.2em;	
+}
+
+.homepage_content.theme-text h4 {
+	font-size: 1.6em;
+	line-height: 1.2em;
+	color: #cccccc;
+}
+
+.homepage_content.theme-text h5 {
+	font-size: 1.8em;
+	line-height: 1.6em;	
+	margin: 10px auto 0;
+}
+
+.homepage_content.theme-text p {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	letter-spacing: 1.1px;
+	text-align: center;
+}
+
+@media (max-width: 1100px) {
+
+	.homepage_content.theme-text h3 {
+		font-size: 1.7em;
+		line-height: 1.4em;	
+	}
+
+	.homepage_content.theme-text h4 {
+		font-size: 1.4em;
+		line-height: 1.2em;	
+	}
+
+	.homepage_content.theme-text h5 {
+		font-size: 1.6em;
+		line-height: 1.3em;	
+	}
+
+	.homepage_content.theme-text p {
+		font-size: 1em;
+		line-height: 1.2em;
+		letter-spacing: 1px;
+	}
+}
+
+@media (max-width: 900px) {
+
+	.homepage_content.theme-text h3 {
+		font-size: 1.5em;
+		line-height: 1.4em;	
+	}
+
+	.homepage_content.theme-text h4 {
+		font-size: 1.3em;
+		line-height: 1.4em;	
+	}
+
+	.homepage_content.theme-text h5 {
+		font-size: 1.5em;
+		line-height: 1.4em;	
+	}
+
+	.homepage_content.theme-text p {
+		font-size: 1em;
+		line-height: 1.5em;
+		letter-spacing: .8px;
+	}
+}
+
+@media (max-width: 767px) {
+	.homepage_content.theme-text h3 {
+		font-size: 1.25em;
+		line-height: 1.5em;	
+	}
+
+	.homepage_content.theme-text h4 {
+		font-size: 1em;
+		line-height: 1.2em;	
+	}
+
+	.homepage_content.theme-text h5 {
+		font-size: 1.3em;
+		line-height: 1.5em;	
+	}
+
+	.homepage_content.theme-text p {
+		font-size: .9em;
+		line-height: 1.5em;
+		letter-spacing: .7px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 618px) {
+	.homepage_content.theme-text h3 {
+		font-size: .9em;
+		line-height: 1.5em;	
+	}
+
+	.homepage_content.theme-text h4 {
+		font-size: .8em;
+		line-height: 1.2em;	
+	}
+
+	.homepage_content.theme-text h5 {
+		font-size: 1.3em;
+		line-height: 1.5em;	
+	}
+
+	.homepage_content.theme-text p {
+		font-size: .8em;
+		line-height: 1.5em;
+		letter-spacing: .75px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 300px) {
+	.homepage_content.theme-text h3 {
+		font-size: .7em;
+		line-height: 1.6em;	
+	}
+
+	.homepage_content.theme-text h4 {
+		font-size: .7em;
+		line-height: 1.8em;	
+	}
+
+	.homepage_content.theme-text h5 {
+		font-size: .9em;
+		line-height: 1.5em;	
+	}
+
+	.homepage_content.theme-text p {
+		font-size: .65em;
+		line-height: 1.2em;
+		letter-spacing: .75px;
+		text-align: center;
+	}
+}
+
+.homepage_column_wrapper {
+	padding-bottom: 20px;
+}
+
+.homepage_column_wrapper a img {
+	display:block;
+    margin:0 auto;
+}
+
+.homepage_column_wrapper a {
+	text-align: center;
+}
+
+#footer {
+	padding: 0px 0;
+}
+
+.custom-footer {
+	padding: 0;
+}
+
+.custom-footer .custom-logo img {
+	max-height: 50px;
+	margin: 20px auto 0;
+	display: block;
+}
+
+.custom-footer .copyright p {
+	padding: 15px 0 0 0;
+	font-size: 1em;
+	line-height: 1em;	
+	text-align: center;
+}
+
+.custom-footer .sitemap p {
+	padding: 0;
+	text-decoration: none;
+	font-size: 1em;
+	line-height: 1em;	
+	text-align: center;
+}
+
+.connect, .sitemap {
+	text-align: center;
+}
+
+.connect p {
+	font-size:.9em;
+	letter-spacing: .1em;
+	line-height: 1.7em;
+}
+
+.custom-footer a:hover, .custom-footer a:active {
+	color: #333344;
+	background: #f5f5f5;
+}
+
+.custom-footer .sitemap a, .custom-footer .copyright a {
+	padding: 6px 0;
+	display: block;
+}
+
+.custom-footer .copyright a {
+	margin-top: 10px;
+	text-decoration: none;
+	font-size: 1em;
+	line-height: 1em;	
+	text-align: center;
+}
+
+.custom-footer h4 {
+	color: #000;
+	text-decoration: none;
+	font-family:'Libre Baskerville', Georgia, serif;
+	font-size: 1.2em;
+	line-height: 1.2em;	
+	text-align: center;	
+	letter-spacing: .1em;
+	margin: 20px 0 10px;
+}
+
+.left_sidebar {
+	text-align: center;
+	background-color: #efefef;
+	padding: 30px 0 20px;
+	border-radius: 10px;
+	min-height: 100%
+}
+
+.left_sidebar button {
+	margin: 0 auto 0;
+	text-align: center;
+}
+
+.left_sidebar .sidebar_menu li a {
+	padding: 5px 0 5px 20px;
+	display:block;
+}
+
+.left_sidebar .sidebar_menu li ul li a {
+	padding-left: 40px;
+}
+
+.left_sidebar ul li ul {
+	text-align:left;
+	font-size:.9em;
+}
+
+.left_sidebar ul li ul li a {
+	padding:3px 10px;
+	display: block;
+}
+
+.horizontal_ul {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.horizontal_ul li {
+	display: table-cell;
+}
+
+.horizontal_ul a {
+	display: block;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.right_sidebar ul li a:hover, .right_sidebar ul li a:active {
+	color: #297acc;
+	background: #f5f5f5;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+.page_bottom {
+	margin: 20px 0;
+}
+
+.tab-content h4 {
+	margin: 10px 0 25px;
+}
+
+.page-text p {
+	/*text-align: left;*/
+}
+
+@media (max-width:368px) {
+	.page-text p, .page-text li {
+		font-size: .9em;
+		line-height: 1.5em;
+		letter-spacing: .7px;
+	}
+	.page-text h3 {
+		font-size: 1.2em;
+		font-weight:bold;
+		letter-spacing: 1.1px;
+	}
+	.panel-group h4, .tab-content h4 {
+		font-size:1em;
+		letter-spacing: .8px;
+		font-weight:bold;
+		margin: 0 0 10px;
+		padding: 0;
+	}
+	.tab-pane {
+	padding: 10px 0 0;
+	}
+	.panel-group img, .tab-content img {
+		display:none;
+	}
+	.panel-group li, .tab-content li {
+		list-style: initial;
+	}
+}
+
+.panel-group a.btn {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 8px;
+}
+
+.yelp_wrapper {
+	text-align: left;
+	margin: 20px auto;
+}
+
+/* All of the following is for navbar-custom-2.html*/
+
+.custom-navbar-2 .custom-logo {
+	float:left;
+	margin-left: 5%
+}
+
+.custom-navbar-2 .social_links ul {
+	position: absolute;
+	right: 0;
+	margin: 15px 5% 0 0;
+}
+
+.custom-navbar-2 .custom-logo img {
+	margin-top:15px;
+	height: 25px;
+	width:auto;
+}
+
+@media (max-width:767px) {
+	.custom-navbar-2 .custom-logo {
+		float:left;
+		margin-left: 0
+	}
+
+	.custom-navbar-2 .social_links ul {
+		margin: 10px auto 0;
+		position: initial;
+	}
+
+	.custom-navbar-2 .custom-logo img {
+		margin-top:0px;
+		height: 25px;
+		width:auto;
+	}
+}
+
+#phone {
+	width: 125px; 
+	text-align: left; 
+	font-weight: bold; 
+	font-size:1.1em;
+}
+
+#call {
+	display: none;
+}
+
+@media (max-width: 480px) {
+	#call {
+		display: block;
+	}
+	#phone {
+		display: none;
+	}
+}
+
+nav.custom-navbar-2 {
+	width:100%; 
+	text-align:center;
+}
+
+@media (min-width:768px){
+	nav.navbar-collapse.custom-navbar-2 {
+		display: inline-block!important;
+	}
+	.custom-navbar-2 .inline_ul li a {
+		display: inline-block!important;
+	}
+}
+
+.inline_ul {
+	margin: 10px auto -1px; 
+	display:inline-block
+}
+
+.custom-navbar-2 .inline_ul li a {
+	padding: 10px 50px;
+	display:block;
+}
+
+.inline_ul li {
+	display:inline;
+}
+
+.custom-navbar-2 ul li a {
+	font-weight: bold;
+}
+
+.custom-navbar-2 #signup_login > a {
+	margin-right: 20px;
+}
+
+.custom-navbar-2 ul li a:link, .custom-navbar-2 ul li a:visited {
+	color: #777!important;
+}
+
+.custom-navbar-2 ul li a:hover, .custom-navbar-2 ul li a:active {
+	color: #333!important;
+	background-color: #e6ecee;
+	border-radius: 10px 10px 0 0;
+}
+

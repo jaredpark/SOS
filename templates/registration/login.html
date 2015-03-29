@@ -1,0 +1,22 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_content_block %}
+	{% if user.username %}
+	<h4 style='text-align:center'>Welcome {{ user.first_name }}! You are currently logged in.</h4>
+	<a class='btn btn-danger btn-sm' style='display:block; margin:0 auto; width:140px;' href='{% url 'profiles_profile_detail' user.username %}'>View Your Account</a>
+	{% else %}
+	<div style='margin-top:20px; padding-bottom:20px; text-align:center;'>
+		<div style='display:inline;'>Current users please sign in below. First time here?&nbsp&nbsp&nbsp</div>
+		<div style='position:absolute;float:left;display:inline;margin-top:-4px;'>
+			<a href='{% url 'registration_register' %}' role='button'><button class="btn btn-sm btn-danger" role='button'>Sign Up now!</button></a>
+		</div>
+	</div>
+	<form class='login_form' method="post" action=".">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<button type="submit" class="btn btn-primary">Log In</button>
+	</form>
+	{% endif %}
+{% endblock page_content_block %}

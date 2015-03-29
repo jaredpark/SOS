@@ -1,0 +1,15 @@
+django-crispy-forms==1.4.0
+django-registration-redux==1.1
+django-profiles==0.2
+
+django-cms>=3.0
+djangocms_text_ckeditor==2.4.3
+south
+Pillow>=2
+django-filer==0.9.8
+cmsplugin-filer==0.10.1
+django-reversion==1.8
+
+django-polls==0.1.0
+
+django-facebook==6.0.2

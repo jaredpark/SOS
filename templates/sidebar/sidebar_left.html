@@ -1,0 +1,55 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load menu_tags %}
+{% load polls %}
+{% load cms_tags %}
+
+<div class='left_sidebar theme-text'>
+    {% if user.is_authenticated %}
+    <h4>Hi {{ user.first_name }} welcome back</h4>
+    {% if user.get_profile.image %}
+    <a href='{% url 'profiles_edit_profile' %}'><img class='img-responsive' style='width:80%; margin:20px auto 0; border-radius:10px' src = '/media/{{ user.get_profile.image }}'></a>
+    {% else %}
+    <a href='{% url 'profiles_edit_profile' %}'>You don't have a picture yet</a>
+    {% endif %}
+    <a class='btn btn-xs btn-primary' href="{% url 'auth_logout' %}?next={% page_url 'home' %}" style='margin:10px auto;'>Log Out</a>
+    {% else %}
+    <form class='login_form' method="post" action="{% url 'auth_login' %}">
+        {% csrf_token %}
+        <div id='div_id_username' class='form-group required'>
+            <label for='id_username' class='control-label requiredField'>Username<span class='asteriskField'>*</span></label>
+            <div class='controls'>
+                <input class='textinput textInput form-control' id='id-username' name='username' type='text'>
+            </div>
+        </div>
+        <div style=' display:inline-block; margin: 0 auto 0;'>
+            <button type="submit" class="btn btn-sm btn-primary" style='float:left;'>Log In</button>
+            <a class='btn btn-sm btn-default' style='float:left;display:inline;margin-left:20px' href='{% url 'registration_register' %}'>Sign Up</a>
+        </div>
+    </form>
+    {% endif %}
+    {% comment %}
+    <h4>Connect Today!</h4>
+    {% include 'misc_pages/social_links.html' %}
+    {% endcomment %}
+    <ul class = 'sidebar_menu'>
+    {% show_menu 0 100 100 100 %}
+    </ul>
+    <div class="fb-like" data-href="{{ fb_fan_page_url }}" data-layout="box_count" data-action="like" data-share="true" data-show-faces="true" data-ref="sidebar_{% page_attribute 'slug' %}"></div>
+    {% comment %}
+    <div class="fb-like" data-share="true" data-layout="box_count" data-width="450" data-show-faces="true"></div>
+    {% if not user.is_authenticated %}
+    <br />
+    <form action="{% url 'facebook_connect' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="{{ request.path }}" name="next" />
+        <br />
+        <div id="facebook_login_redirect">
+            <input type="image" src="{{ STATIC_URL }}django_facebook/images/facebook_login.png" /><br />
+            (redirect version)
+        </div>
+    </form>
+    {% else %}
+    {% endif %}
+    {% endcomment %}
+</div>

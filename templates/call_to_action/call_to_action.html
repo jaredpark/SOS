@@ -1,0 +1,21 @@
+<div class='container-fluid call-to-action-banner theme-bg'>
+  <div>
+    {% if form_errors %}
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contact_modal">
+      Form Error/s, please try again!
+    </button>
+    {% elif first_name %}
+    Thanks for getting in touch {{ first_name }}! 
+    {% elif user.is_authenticated %}
+    Welcome {{ user.first_name }}! {{ user_cta_text }} &nbsp<a class='btn btn-default btn-sm' href="{% url user_cta_link %}">{{ user_cta_button }}</a>
+    {% elif contact_form %}
+    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#contact_modal">{{ call_to_action_button_text }}</button>
+    <span>{{ call_to_action_text }}</span>
+    {% else %}
+    <a href='{% url 'contact' %}' type="button" class="btn btn-default btn-sm">{{ call_to_action_button_text }}</a>
+    <span>{{ call_to_action_text }}</span>
+    {% endif %}
+  </div>
+</div>
+
+{% include 'contact_form/contact_form.html' with contact_form=contact_form %}

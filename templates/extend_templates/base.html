@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+  <title> {{ company_name }} </title>
+  <meta name="description" content="{{ meta_content }}">
+  <meta name="keywords" content="{{ meta_keywords }}">
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+  <link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet"/>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-theme.min.css" %}">
+  <link rel="stylesheet" href="{% static "font-awesome-4.2.0/css/font-awesome.css" %}">
+  <link rel="stylesheet" href="{% static "css/base.css" %}">
+  <link rel="stylesheet" href="{% static "css/social-buttons.css" %}">
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
+  <script> 
+  // wait for the DOM to be loaded 
+    $(document).ready(function() { 
+      $('#contact_form').ajaxForm(function() { 
+        alert("Thank you for contacting us!"); 
+      }); 
+    }); 
+  </script> 
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  <script TYPE="text/javascript">
+    <!--
+    function popup(mylink, windowname)
+    {
+    if (! window.focus)return true;
+    var href;
+    if (typeof(mylink) == 'string')
+      href=mylink;
+    else
+      href=mylink.href;
+    window.open(href, windowname, 'width=360,height=360,scrollbars=yes');
+    return false;
+    }
+    //-->
+  </script>
+</head>
+
+<body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '706307349482089',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+  (function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  <!--
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  //-->
+  </script>
+  {% include 'navbar/nav_bar.html' %}
+  <div id='base_body_wrapper'>
+    {% include 'call_to_action/call_to_action.html' %}
+    {% block body_block %}{% endblock %}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+  <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+</body>
+{% include 'footer/footer.html' %}
+</html>

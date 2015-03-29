@@ -1,0 +1,35 @@
+{% load static %}
+{% load cms_tags %}
+
+<header class="navbar navbar-default navbar-static-top custom-navbar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span style=''>Menu</span>
+      </button>
+      <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}"></a>
+    </div>
+    <nav class="navbar-collapse collapse custom-navbar theme-text" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li><a href="{% page_url 'user_profile' %}">My Account</a></li>
+        {% else %}
+        <div id='signup_login'>
+          <a class='btn btnn-sm btn-default' href="{% url 'registration_register' %}">Sign Up</a>
+          <a class='btn btn-sm btn-primary' href="{% url 'auth_login' %}" style='margin-right:5px'>Log In</a>
+        </div>
+        {% endif %}
+        <li><a href="{% page_url navbar_link1_name %}"> {{ navbar_link1_text }} </a>
+          <ul class='navbar-default dropdown-menu' role='menu'>
+            <li><a href="{% page_url sublink1_name %}">{{sublink1_text}}</a></li>
+            <li><a href="{% page_url sublink2_name %}">{{sublink2_text}}</a></li>
+            <li><a href="{% page_url sublink3_name %}">{{sublink3_text}}</a></li>
+          </ul>
+        </li>
+        <li><a href="{% page_url navbar_link2_name %}"> {{ navbar_link2_text }} </a></li>
+        <li><a href="{% page_url navbar_link3_name %}"> {{ navbar_link3_text }} </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

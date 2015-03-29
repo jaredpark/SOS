@@ -1,0 +1,8 @@
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+<form role="form" method="post" enctype="multipart/form-data" style='width:80%; margin:0 auto;' action='{% url 'example_form' %}'>
+{% csrf_token %}
+{{ example_form|crispy }}
+<button type="submit" name="example" class="btn btn-primary">Try it out</button>
+</form>

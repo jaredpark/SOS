@@ -1,0 +1,43 @@
+{% load static %}
+{% load cms_tags %}
+
+<footer id='footer' class="navbar navbar-default navbar-bottom custom-footer theme-text" role="navigation">
+  <div class="container-fluid">
+    <div class='row'>
+      <div class='col-md-4 connect'>
+        <div style='height:10px'></div>
+        <h4 style='margin:10px auto'>{{ company_name }}</h4>
+        <p style='margin:2px auto;'>{{ company_phone_text }}</p>
+        <p style='margin:0 auto;'>{% include 'misc_pages/email.html' %}</p>
+        <p style='margin:3px auto;'>{{ company_address }}</p>
+      </div>
+      <div class='col-md-4 sitemap'>
+        <ul>
+          <li><h4>Sitemap</h4></li>
+          <li><a href="{% page_url navbar_link1_name %}">{{ navbar_link1_text }}</a></li>
+          <li><a href="{% page_url navbar_link2_name %}">{{ navbar_link2_text }}</a></li>
+          <li><a href="{% page_url navbar_link3_name %}">{{ navbar_link3_text }}</a></li>
+        </ul>
+      </div>
+      <div class='col-md-4 copyright'>
+        {% comment %} 
+        before cms:
+        <a class='custom-logo' href="{% url 'index' %}"><img class='img-responsive' src="{% static logo_file_name %}"></a>
+        {% endcomment %}
+        <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}"></a>
+        <a href="{% page_url 'contact' %}">&copy;{{ footer_copyright }}</a>
+      </div>
+  </div>
+</footer>
+<script>
+//   $(document).ready(function() {
+
+//    var docHeight = $(window).height();
+//    var footerHeight = $('#footer').height();
+//    var footerTop = $('#footer').position().top + footerHeight;
+
+//    if (footerTop < docHeight) {
+//     $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+//    }
+//   });
+</script>

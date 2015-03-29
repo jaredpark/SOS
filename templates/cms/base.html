@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load cms_tags %}
+{% load cms_tags sekizai_tags %}
+
+<html>
+<head>
+  <title> {{ company_name }} </title>
+  <meta name="description" content="{{ meta_content }}">
+  <meta name="keywords" content="{{ meta_keywords }}">
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+  <link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-theme.min.css" %}">
+  <link rel="stylesheet" href="{% static "font-awesome-4.2.0/css/font-awesome.css" %}">
+  <!--  Local Styles -->
+  <link rel="stylesheet" href="{% static "css/base.css" %}">
+  <link rel="stylesheet" href="{% static "css/social-buttons.css" %}">
+  <!-- Google link between site and g+ page -->
+  <link rel="publisher" href="{{ google_plus_url }}">
+  <script src="http://malsup.github.com/jquery.form.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  <script TYPE="text/javascript">
+    <!--
+    function popup(mylink, windowname)
+    {
+    if (! window.focus)return true;
+    var href;
+    if (typeof(mylink) == 'string')
+      href=mylink;
+    else
+      href=mylink.href;
+    window.open(href, windowname, 'width=360,height=360,scrollbars=yes');
+    return false;
+    }
+    //-->
+  </script>
+  <script>
+    <!--
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60122507-1', 'auto');
+    ga('send', 'pageview');
+    -->
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  {% render_block "css" %}
+</head>
+
+<body>
+  {% cms_toolbar %}
+ <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId={{ fb_app_id }}&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  {% include 'navbar/nav_bar.html' %}
+  <div id='base_body_wrapper'>
+    {% include 'call_to_action/call_to_action.html' %}
+    {% placeholder base_content %}
+    {% block body_block %}{% endblock %}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+  <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+  {% render_block "js" %}
+</body>
+{% include 'footer/footer.html' %}
+</html>

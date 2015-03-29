@@ -1,0 +1,49 @@
+{% load cms_tags %}
+{% load static %}
+
+<div class='container-fluid homepage_content theme-bg theme-text'>
+	<div>
+		<h3>{{ homepage_content_top }}</h3><h4><em>{{ homepage_content_quote }}</em> - {{ homepage_content_quote_name }}</h4>
+		{% comment %}
+		{% placeholder 'content_top_text' %}
+		{% endcomment %}
+	</div>
+	<div class='container-fluid homepage_column_wrapper theme-text homepage-text'>
+		<div class='col-md-4'>
+			<a href='{% page_url img1_link_name %}'>
+				<h5>{{ img1_title }}</h5>
+				<img src='{% static img1_file %}' alt='{{ img1_alt }}'></img>
+				<p>{{ img1_text }}</p>
+			</a>
+			{% comment %}
+			<a href='{% page_url img1_link_name %}'>
+				{% placeholder 'column_one' %}
+			</a>
+			{% endcomment %}
+		</div>
+		<div class='col-md-4'>
+			<a href='{% page_url img2_link_name %}'>
+				<h5>{{ img2_title }}</h5>
+				<img src='{% static img2_file %}' alt='{{ img2_alt }}'></img>
+				<p>{{ img2_text }}</p>
+			</a>
+			{% comment %}
+			<a href='{% page_url img2_link_name %}'>
+				{% placeholder 'column_two' %}
+			</a>
+			{% endcomment %}
+		</div>
+		<div class='col-md-4'>
+			<a href='{% page_url img3_link_name %}'>
+				<h5>{{ img3_title }}</h5>
+				<img src='{% static img3_file %}' alt='{{ img3_alt }}'></img>
+				<p>{{ img3_text }}</p>
+			</a>
+			{% comment %}
+			<a href='{% page_url img3_link_name %}'>
+				{% placeholder 'column_three' %}
+			</a>
+			{% endcomment %}
+		</div>
+	</div>
+</div>

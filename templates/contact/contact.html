@@ -1,0 +1,29 @@
+{% extends 'cms/base_no_sidebar.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+{% block page_content_block %}
+{% static_placeholder 'main_image' %}
+{% comment %}
+<div style='margin-top: 20px; 'itemscope itemtype="http://schema.org/LocalBusiness">
+	<div style='text-align:center;'>On your phone or skype?  <span itemprop="telephone"><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a></span>
+	<br /><br />
+	Or call: <span style='font-size:1.3em;'>{{ company_phone_text }}</span>
+	</div>
+</div>
+{% endcomment %}
+<br />
+<iframe id='google_map' frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=3026%20S%20Paseo%20Loma%20Circle%2C%20Mesa%2C%20AZ%2085202&key=AIzaSyDCkjnfCeHnozt6AR3tq5JxaGn_JwDxo7M"></iframe>
+{% if contact_form %}
+<form role="form" method="post" style='width:80%; margin:0 auto;'>
+{% csrf_token %}
+{{ contact_form|crispy }}
+<button type="submit" name="contact" class="btn btn-primary">Send Message</button>
+</form>
+{% else %}
+<h4 style='text-align:center;'>Message received - we'll get in touch in the next 24 hours.</h4>
+<p style='text-align:center;'>For now, take a look at the rest of our <a href='{% page_url 'services' %}'>services</a>.</p>
+{% endif %}
+{% endblock page_content_block %}

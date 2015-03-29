@@ -1,0 +1,39 @@
+{% extends 'cms/base.html' %}
+
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+	<div class='row' style='height:1vw;'></div>
+	<div class='row page_content container-fluid'>
+		<div class='col-md-3 sides hidden-xs hidden-sm'>
+			{% include 'sidebar/sidebar_left.html' %}
+		</div>
+		<div class='col-md-6 theme-text'>
+			{% block page_content_block %}
+			<div class='img-responsive'>
+				{% placeholder 'main_image' %}
+			</div>
+			{% placeholder 'page_content' %}
+			{% endblock page_content_block %}
+		</div>
+		<div class='col-md-3 sides hidden-xs hidden-sm' style='postion:relative;'>
+			{% include 'sidebar/sidebar_right.html' %}
+		</div>
+	</div>
+	<div class='row page_content page_bottom container-fluid'>
+		<div class='col-md-6 left_footer_col'>
+			<h2>Testimonials</h2>
+			<blockquote>{{ default_testimonial }}</blockquote>
+		</div>
+		<div class='col-md-6 right_footer_col'>
+			<div>
+				<h2 style='text-align:right;'>{{ unique_content_title }}</h2>
+				<p style='text-align:right;'>{{ unique_content_text }}</p>
+				<div style='text-align:right;'>
+					<a href='{% url unique_content_link_name %}' type="button" class="btn btn-danger">{{ unique_content_button_text }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock body_block %}

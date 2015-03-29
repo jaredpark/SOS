@@ -1,0 +1,8 @@
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+<form role="form" method="post" style='width:80%; margin:0 auto;' action='{% url 'contact' %}'>
+{% csrf_token %}
+{{ contact_form|crispy }}
+<button type="submit" name="contact" class="btn btn-primary">Send Message</button>
+</form>

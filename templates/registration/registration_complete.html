@@ -1,0 +1,8 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_content_block %}
+<h3>Registration Email Sent</h3>
+        <p>Please check {{ user.email }} for an email from us to complete the final step of creating an account.</p>
+{% endblock page_content_block %}

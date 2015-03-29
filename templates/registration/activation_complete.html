@@ -1,0 +1,6 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% block page_content_block %}
+<h3>Registration complete!</h3>
+<p><a href="{% url 'profiles_profile_detail' user.username %}">Visit your account page</a></p>
+{% endblock %}

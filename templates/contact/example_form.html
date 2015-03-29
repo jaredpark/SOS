@@ -1,0 +1,25 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+{% block page_content_block %}
+{% static_placeholder 'main_image' %}
+<div itemscope itemtype="http://schema.org/LocalBusiness">
+	<div style='text-align:center;'>On your phone or skype?<br /><br /><span itemprop="telephone"><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a></span>
+	<br /><br />
+	Or call us at <h4>{{ company_phone_text }}</h4>
+	</div>
+</div>
+<br />
+{% if example_form %}
+<form role="form" method="post" enctype="multipart/form-data" style='width:80%; margin:0 auto;'>
+{% csrf_token %}
+{{ example_form|crispy }}
+<button type="submit" name="example" class="btn btn-primary">Send Message</button>
+</form>
+{% else %}
+<p>Think of the ways you can use custom forms to improve sales and let me know your ideas.</p>
+{% endif %}
+{% endblock page_content_block %}

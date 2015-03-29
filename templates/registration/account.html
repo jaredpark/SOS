@@ -1,0 +1,77 @@
+{% extends 'cms/base_sidebar_left.html' %}
+
+{% load crispy_forms_tags %}
+{% load cms_tags %}
+
+{% block page_content_block %}
+<row style='text-align:center;'>
+	<p><a class='btn btn-sm btn-primary' href="{% url 'logout' %}" style='color:#fff'>Click here</a> to log out.</p>
+</row>
+<ul id='account-tabs' class="nav nav-tabs" role='tablist'>
+  <li role="presentation"><a href="#tab1" id='tab1-tab' role='tab' data-toggle='tab' aria-controls='tab1' aria-expanded='false'>My Account</a></li>
+  <li role="presentation"><a href="#tab2" id='tab2-tab' role='tab' data-toggle='tab' aria-controls='tab2' aria-expanded='false'>My Details</a></li>
+</ul>
+<div id='account-tab-content' class='tab-content'>
+	<div role='tabpanel' class='tab-pane fade' id='tab1' aria-labelledby='tab1-tab'>
+		<div class='table-responsive'>
+			<table class='table table-hover'>
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scorpe='row'>Next Appointment</th>
+						<td>{{ user.get_profile.zip_code }}</td>
+					</tr>
+					<tr>
+						<th scorpe='row'>Current Balance</th>
+						<td>{{ user.get_profile.last_name }}</td>
+					</tr>
+					<tr>
+						<th scorpe='row'>Other Info</th>
+						<td>{{ user.get_profile.email }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div role='tabpanel' class='tab-pane fade' id='tab2' aria-labelledby='tab2-tab'>
+		<div class='table-responsive'>
+			<table class='table table-hover'>
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scorpe='row'>First Name</th>
+						<td>{{ user.get_profile.first_name }}</td>
+					</tr>
+					<tr>
+						<th scorpe='row'>Last Name</th>
+						<td>{{ user.get_profile.last_name }}</td>
+					</tr>
+					<tr>
+						<th scorpe='row'>Email</th>
+						<td>{{ user.get_profile.email }}</td>
+					</tr>
+
+					<tr>
+						<th scorpe='row'>Address</th>
+						<td>{{ user.get_profile.address }}</td>
+					</tr>
+					<tr>
+						<th scorpe='row'>Zipcode</th>
+						<td>{{ user.get_profile.zipcode }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock page_content_block %}

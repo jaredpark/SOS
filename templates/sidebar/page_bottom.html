@@ -1,0 +1,55 @@
+{% load cms_tags %}
+
+<div class='row page_content page_bottom container-fluid'>
+	<div class='col-md-6 left_footer_col'>
+		<h2>Testimonials</h2>
+		{% static_placeholder 'random_quote' %}
+	</div>
+	<div class='col-md-6 right_footer_col'>
+		<div>
+			{% if user.is_authenticated %}
+			<h2 style='text-align:right;'>Thanks for logging in {{ user.first_name }}</h2>
+				{% if profile.pest_customer and profile.weed_customer %}
+			<p style='text-align:right;'>We are proud that you have chosen to let us handle your pest and weed control needs, please take a moment to share your experience on Yelp.</p>
+			<p style='text-align:right;'>Link coming once we're all set up</p>
+				{% elif profile.pest_customer %}
+			<p style='text-align:right;'>We are proud that you have chosen to let us handle your pest control needs. Did you know we offer weed control too?</p>
+			<p style='text-align:right;'>Link coming once we're all set up</p>
+				{% elif profile.weed_customer %}
+			<p style='text-align:right;'>We are proud that you have chosen to let us handle your weed control needs. Did you know we offer pest control too?</p>
+			<p style='text-align:right;'>Link coming once we're all set up</p>
+				{% else %}
+			<p style='text-align:right;'>Creating an account was the first step, now it is time to let us show you why we are the best in town.</p>
+			<div style='text-align:right;'><a href='{% page_url 'services' %}' type="button" class="btn btn-default">Our Services</a></div>
+				{% endif %}
+			{% else %}				
+			<h2 style='text-align:right;'>{{ unique_content_title }}</h2>
+			<p style='text-align:right;'>{{ unique_content_text }}</p>
+			<div style='text-align:right'>
+				<a href='{% url unique_content_link_name %}' type="button" class="btn btn-default">{{ unique_content_button_text }}</a>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	<div class='col-md-12' style='text-align:center; margin-top:20px;'>
+		{% if form_errors %}
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contact_modal">
+          Form Error/s, please try again!
+        </button>
+        {% elif first_name %}
+        <a href="{% page_url 'about' %}">
+          <button type="button" class="btn btn-danger">
+            Thanks for getting in touch!
+          </button>
+        </a>
+        {% elif contact_form %}
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contact_modal">
+          {{ call_to_action_button_text }}
+        </button>
+        {% else %}
+        <a href="{% page_url 'contact' %}">
+          <button type="button" class="btn btn-danger">{{ call_to_action_button_text }}</button>
+        </a>
+        {% endif %}
+	</div>
+</div>

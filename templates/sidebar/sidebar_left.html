@@ -1,8 +1,7 @@
+{% load cms_tags %}
 {% load static %}
 {% load crispy_forms_tags %}
 {% load menu_tags %}
-{% load polls %}
-{% load cms_tags %}
 
 <div class='left_sidebar theme-text'>
     {% if user.is_authenticated %}
@@ -28,15 +27,11 @@
         </div>
     </form>
     {% endif %}
-    {% comment %}
-    <h4>Connect Today!</h4>
-    {% include 'misc_pages/social_links.html' %}
-    {% endcomment %}
     <ul class = 'sidebar_menu'>
     {% show_menu 0 100 100 100 %}
     </ul>
-    <div class="fb-like" data-href="{{ fb_fan_page_url }}" data-layout="box_count" data-action="like" data-share="true" data-show-faces="true" data-ref="sidebar_{% page_attribute 'slug' %}"></div>
     {% comment %}
+    <div class="fb-like" data-href="{{ fb_fan_page_url }}" data-layout="box_count" data-action="like" data-share="true" data-show-faces="true" data-ref="sidebar_{% page_attribute 'slug' %}"></div>
     <div class="fb-like" data-share="true" data-layout="box_count" data-width="450" data-show-faces="true"></div>
     {% if not user.is_authenticated %}
     <br />

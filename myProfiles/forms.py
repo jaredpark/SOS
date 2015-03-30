@@ -12,4 +12,4 @@ class MyRegistrationForm(RegistrationForm):
 class MyProfileForm(ModelForm):
 	class Meta:
 		model = UserProfile
-		fields = ('image', 'email', 'phone', 'notes')
+		fields = ('image','first_name', 'last_name', 'email', 'phone', 'notes')

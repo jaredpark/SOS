@@ -1,9 +1,8 @@
 {% load crispy_forms_tags %}
 {% load cms_tags %}
 
-{{ a }}
 {% if quick_contact_form %}
-<form role="form" method="post" action='{% url 'contact' %}'>
+<form role="form" method="post" action='{% page_url 'contact' %}'>
 {% csrf_token %}
 {{ quick_contact_form|crispy }}
 <button type="submit" name="contact" class="btn btn-primary">Send Message</button>

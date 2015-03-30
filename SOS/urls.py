@@ -16,8 +16,6 @@ from django.conf import settings
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^contact/', include('contact.urls')),
-	# url(r'^my_account/', include('user_interface.urls')),
     url(r'accounts/register/$', RegistrationView.as_view(form_class = MyRegistrationForm), name = 'registration_register'),
 	url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^profiles/', include('myProfiles.urls')),

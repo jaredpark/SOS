@@ -2,23 +2,16 @@
 {% load static %}
 
 <div class='container-fluid homepage_image' style='padding: 0'>
-	<div class='image_container'>
-		<img src="{% static main_image_file %}">
-		{% comment %}
-		before cms:
-		{% placeholder 'main_image' %}
-		{% endcomment %}
+	<div class='image_container' style='background: url("{% static main_image_file %}") center center no-repeat'>
+		<div class='homepage_image_text'>
+			<h3>
+				{{ main_image_header_text }}
+				<a href='{% page_url main_image_button_link_name %}' style='text-decoration:none;' class="btn btn-danger">
+					{{ main_image_button_text }}
+				</a>
+				<span><p>{{ main_image_content_text }}</p></span>
+			</h3>
+		</div>
 	</div>
-	<div class='homepage_image_text'>
-		<h3>
-			{{ main_image_header_text }}
-			<a href='{% page_url main_image_button_link_name %}' style='text-decoration:none;' class="btn btn-danger">
-				{{ main_image_button_text }}
-			</a>
-			<span><p>{{ main_image_content_text }}</p></span>
-			{% comment %}
-			{% placeholder 'main_image_text' %}
-			{% endcomment %}
-		</h3>
-	</div>
+
 </div>

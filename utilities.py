@@ -1,8 +1,46 @@
 from context_processors import site_settings_processor
 from django.core.mail import send_mail, EmailMessage
-import datetime
+import datetime, os
 
-from contact.forms import ContactForm
+from contact.forms import ContactForm, CouponForm
+
+is_production = os.environ.get('IS_PRODUCTION')
+
+def CouponFormProcessor(request, context_dictionary):
+	if request.method == 'POST':
+		if 'specials' in request.POST:
+			# create a form instance and populate it with data from the request:
+			coupon_form = CouponForm(request.POST)
+			# check whether it's valid:
+			if coupon_form.is_valid():
+				first_name = coupon_form.cleaned_data['first_name']
+				last_name = coupon_form.cleaned_data['last_name']
+				zipcode = coupon_form.cleaned_data['zipcode']
+				phone = coupon_form.cleaned_data['phone']
+				website_visitor = coupon_form.cleaned_data['email']
+				contact_permission = coupon_form.cleaned_data['permission']
+				company_email = site_settings_processor(request)['site_email']
+				header = 'First name,' + 'last name,' + 'Zip Code,' + 'Main Phone,' + 'Email,' + 'CF[Marketing_permission],'
+				form_data = first_name + "," + last_name + "," + str(zipcode) + "," + phone + "," + website_visitor + "," + str(contact_permission)
+				fullemail = header + form_data
+				time_stamp = str(datetime.datetime.now())
+				to_company_email_object = EmailMessage(subject = 'website coupon inquiry', body = form_data, from_email = website_visitor, to = [company_email,], attachments = [(time_stamp+'.txt',fullemail,),])
+				to_company_email_object.send()
+				to_visitor_email_object = EmailMessage(subject = 'Coupon Email Subject', body = 'Coupon Email Body', from_email = company_email, to = [website_visitor,])
+				if is_production:
+					prefix = project_name() + '/'
+				else:
+					prefix = ''
+				to_visitor_email_object.attach_file(prefix + 'static/documents/coupon_example.pdf')
+				to_visitor_email_object.send()
+				context_dictionary['first_name'] = first_name
+			else:
+				context_dictionary['form_errors'], context_dictionary['coupon_form'] = True, coupon_form
+		else:
+			pass
+	else:
+		coupon_form = CouponForm()
+		context_dictionary['coupon_form'] = coupon_form
 
 def admin_name():
     return site_settings_processor(None)['admin_name']
@@ -19,8 +57,6 @@ def ContactFormProcessor(request, context_dictionary):
 				address = contact_form.cleaned_data['address']
 				zipcode = contact_form.cleaned_data['zipcode']
 				inquiry_type = contact_form.cleaned_data['inquiry_type']
-				property_type = contact_form.cleaned_data['property_type']
-				square_footage = contact_form.cleaned_data['square_footage']
 				phone = contact_form.cleaned_data['phone']
 				sender = contact_form.cleaned_data['email']
 				preferred_contact = contact_form.cleaned_data['preferred_contact']
@@ -31,8 +67,8 @@ def ContactFormProcessor(request, context_dictionary):
 				recipients = [site_settings_processor(request)['site_email'],]
 				# from_email = site_settings_processor(request)['site_email']
 				from_email = sender
-				header = 'First name,' + 'last name,' + 'Address,' + 'Zip Code,' + 'CF[Inquiry type],' + 'CF[Property type],' + 'CF[Square footage],' + 'Main Phone,' + 'Email,' + 'CF[Preferred contact method],' + 'CF[Availability],' + 'CF[Marketing_permission],' + 'CF[Subject],' + 'CF[Message]\n'
-				fullemail = header + first_name + "," + last_name + "," + address + "," + str(zipcode) + "," + ' - '.join(inquiry_type) + "," + property_type + "," + square_footage + "," + phone + "," + sender + "," + preferred_contact + "," + ' - '.join(availability) + "," + str(contact_permission) + "," + subject + "," + message_body
+				header = 'First name,' + 'last name,' + 'Address,' + 'Zip Code,' + 'CF[Inquiry type],' + 'Main Phone,' + 'Email,' + 'CF[Preferred contact method],' + 'CF[Availability],' + 'CF[Marketing_permission],' + 'CF[Subject],' + 'CF[Message]\n'
+				fullemail = header + first_name + "," + last_name + "," + address + "," + str(zipcode) + "," + ' - '.join(inquiry_type) + "," + phone + "," + sender + "," + preferred_contact + "," + ' - '.join(availability) + "," + str(contact_permission) + "," + subject + "," + message_body
 				time_stamp = str(datetime.datetime.now())
 				email_object = EmailMessage(subject = subject, body = message_body, from_email = from_email, to = recipients, attachments = [(time_stamp+'.txt',fullemail,),])
 				email_object.send()

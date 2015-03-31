@@ -11,6 +11,12 @@ li a p {
     margin: 0 auto;
 }
 
+form {
+	width:80%;
+    max-width:600px;
+	margin:0 auto;
+}
+
 #page-tabs {
 	margin-top: 20px;
 }
@@ -307,6 +313,8 @@ ul li:hover ul{
 }
 
 .carousel_container, .image_container{
+	background: url("../images/hero-temp.jpg") center center no-repeat;
+	background-size: cover;
 	height: 500px;
 	width: 100%;
 	float: left;
@@ -722,6 +730,7 @@ ul li img.filer_image {
     margin:0 auto;
     width: 70%;
     max-width: 320px;
+    max-height: 174px;
 }
 
 .homepage_column_wrapper a {
@@ -730,6 +739,7 @@ ul li img.filer_image {
 
 #footer {
 	padding: 0px 0;
+	background: url('../images/para_diag.jpg') top center repeat;
 }
 
 .custom-footer {
@@ -798,7 +808,7 @@ ul li img.filer_image {
 
 .left_sidebar {
 	text-align: center;
-	background-color: #fffffc;
+	background: url('../images/para_diag.jpg');
 	padding: 10px 0 20px;
 	margin: 20px 0;
 	border-radius: 10px;
@@ -924,7 +934,7 @@ blockquote {
 	display: block;
 	margin: 0;
 	padding: 20px;
-	background-color: #edefef;
+	background: url('../images/para_diag.jpg') top center repeat;
 	box-shadow: 3px 3px 8px #888;
 }
 

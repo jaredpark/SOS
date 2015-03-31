@@ -16,7 +16,7 @@ class UserProfile(FacebookProfileModel):
 	last_name = models.CharField(default='',blank=True, null=True, max_length=20)
 	address = models.CharField(default='',blank=True, null=True, max_length=60)
 	city = models.CharField(default='',blank=True, null=True, max_length=20)
-	zipcode = models.IntegerField(default=85111,blank=True, null=True, max_length=5)
+	zipcode = models.IntegerField(default='',blank=True, null=True, max_length=5)
 	phone = models.CharField(default='',blank=True, null=True, max_length=12)
 	email = models.EmailField(default='',blank=True, null=True, max_length=40)
 	has_dog = models.BooleanField(default = False,blank=True)
@@ -48,6 +48,7 @@ class UserProfile(FacebookProfileModel):
 		profile.first_name = request.POST["first_name"]
 		profile.last_name = request.POST["last_name"]
 		profile.email = request.POST["email"]
+		profile.zipcode = int(request.POST["zipcode"])
 		profile.save()
 		user.first_name = request.POST["first_name"]
 		user.last_name = request.POST["last_name"]

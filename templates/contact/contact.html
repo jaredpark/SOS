@@ -10,14 +10,14 @@
 <div style='margin-top: 20px; 'itemscope itemtype="http://schema.org/LocalBusiness">
 	<div style='text-align:center;'>On your phone or skype?  <span itemprop="telephone"><a class='btn btn-danger' href="tel:+{{ company_phone_link }}">Call Us Now</a></span>
 	<br /><br />
-	Or call: <span style='font-size:1.3em;'>{{ company_phone_text }}</span>
+	Or call: <span itemprop="telephone" style='font-size:1.3em;'>{{ company_phone_text }}</span>
 	</div>
 </div>
 {% endcomment %}
 <br />
-<iframe id='google_map' frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=3026%20S%20Paseo%20Loma%20Circle%2C%20Mesa%2C%20AZ%2085202&key=AIzaSyDCkjnfCeHnozt6AR3tq5JxaGn_JwDxo7M"></iframe>
+<iframe id='google_map' frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3331.115185192453!2d-111.88358600000001!3d33.394159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b087578ca27bb%3A0x56e6283ffe2f465c!2s3226+S+Evergreen+Rd%2C+Tempe%2C+AZ+85282!5e0!3m2!1sen!2sus!4v1427759791096"></iframe>
 {% if contact_form %}
-<form role="form" method="post" style='width:80%; margin:0 auto;'>
+<form role="form" method="post" class='contact_page_form'>
 {% csrf_token %}
 {{ contact_form|crispy }}
 <button type="submit" name="contact" class="btn btn-primary">Send Message</button>

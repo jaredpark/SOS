@@ -170,8 +170,8 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'jaredjamespark@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'jaredjamespark@gmail.com'
-SERVER_EMAIL = 'jaredjamespark@gmail.com'
+DEFAULT_FROM_EMAIL = 'contact@sospoolrescue.com'
+SERVER_EMAIL = 'jared@surgesite.com'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 

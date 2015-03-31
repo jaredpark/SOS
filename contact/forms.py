@@ -28,3 +28,13 @@ class QuickContactForm(forms.Form):
 		widget = forms.CheckboxSelectMultiple(), required=True)
 	email = forms.EmailField(label='Email Address', required=True)
 	phone = forms.CharField(label='Phone Number', required=False)
+
+class CouponForm(forms.Form):
+	error_css_class = 'error'
+	required_css_class = 'required'
+	first_name = forms.CharField(label='First Name', required=True)
+	last_name = forms.CharField(label='Last Name', required=True)
+	zipcode = forms.IntegerField(label='Zip Code', required=True)
+	email = forms.EmailField(label='Email Address', required=True)
+	phone = forms.CharField(label='Phone Number', required=True)
+	permission = forms.BooleanField(label="Do you want to know the 5 things your bug guy hasn't told you?", required=False, initial=True)

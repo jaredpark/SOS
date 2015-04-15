@@ -77,6 +77,7 @@ TEMPLATE_DIRS = [
 #django-cms req's
 CMS_TEMPLATES = (
     ('cms/index.html', gettext('Index')),
+    ('cms/base_no_sidebar.html', gettext('Base No Sidebar')),
     ('cms/base_sidebar_left.html', gettext('Base Sidebar L')),
     ('cms/base_sidebar_both.html', gettext('Base Sidebar L+R')),
     ('cms/base_sidebar_left_pills.html', gettext('Base Sidebar L Pills')),

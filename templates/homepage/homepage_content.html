@@ -1,49 +1,33 @@
 {% load cms_tags %}
 {% load static %}
 
-<div class='container-fluid homepage_content theme-bg theme-text'>
-	<div>
-		<h3>{{ homepage_content_top }}</h3><h4><em>{{ homepage_content_quote }}</em> - {{ homepage_content_quote_name }}</h4>
-		{% comment %}
-		{% placeholder 'content_top_text' %}
-		{% endcomment %}
+<div id='homepage_service_section' class='myContainer'>
+	<div class='row'>
 	</div>
-	<div class='container-fluid homepage_column_wrapper theme-text homepage-text'>
-		<div class='col-md-4'>
-			<a href='{% page_url img1_link_name %}'>
-				<h5>{{ img1_title }}</h5>
-				<img src='{% static img1_file %}' alt='{{ img1_alt }}'></img>
-				<p>{{ img1_text }}</p>
+	<div class='row' style='text-align:center;'>
+		<div class='col one-third-col first'>
+			<a href='{% page_url 'pool_service' %}'>
+				<h3>Weekly Service</h3>
+				<img src='{% static 'images/swimmer.png' %}' alt='Weekly Pool Service'></img>
 			</a>
-			{% comment %}
-			<a href='{% page_url img1_link_name %}'>
-				{% placeholder 'column_one' %}
-			</a>
-			{% endcomment %}
+			<p>Our weekly pool cleaning services makes owning a pool worry-free with flat-rate monthly billing</p>
+			<p>Discover our <a href='{% page_url 'pool_service' %}'>Weekly Pool Service options</a></p>
 		</div>
-		<div class='col-md-4'>
-			<a href='{% page_url img2_link_name %}'>
-				<h5>{{ img2_title }}</h5>
-				<img src='{% static img2_file %}' alt='{{ img2_alt }}'></img>
-				<p>{{ img2_text }}</p>
+		<div class='col one-third-col'>
+			<a href='{% page_url 'pool_repair' %}'>
+				<h3>Repairs</h3>
+				<img src='{% static 'images/wrench.png' %}' alt='Pool Equipment Repairs'></img>
 			</a>
-			{% comment %}
-			<a href='{% page_url img2_link_name %}'>
-				{% placeholder 'column_two' %}
-			</a>
-			{% endcomment %}
+			<p>Our qualified technicians are on-call for your emergency or preventative maintenance needs</p>
+			<p>Learn about our <a href='{% page_url 'pool_repair' %}'>Pool Repair Services</a></p>
 		</div>
-		<div class='col-md-4'>
-			<a href='{% page_url img3_link_name %}'>
-				<h5>{{ img3_title }}</h5>
-				<img src='{% static img3_file %}' alt='{{ img3_alt }}'></img>
-				<p>{{ img3_text }}</p>
+		<div class='col one-third-col last'>
+			<a href='{% page_url 'all_pool_services' %}'>
+				<h3>Other Services</h3>
+				<img src='{% static 'images/pool.png' %}' alt='Other Pool Services'></img>
 			</a>
-			{% comment %}
-			<a href='{% page_url img3_link_name %}'>
-				{% placeholder 'column_three' %}
-			</a>
-			{% endcomment %}
+			<p>Green-to-clean, new pool startups, custom water feature construction, and more</p>
+			<p>Find out about <a href='{% page_url 'all_pool_services' %}'>all of our Pool Services</a></p>
 		</div>
 	</div>
 </div>

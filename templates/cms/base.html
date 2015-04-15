@@ -13,13 +13,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
-  <link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet">
   <!-- Optional theme -->
-  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-theme.min.css" %}">
-  <link rel="stylesheet" href="{% static "font-awesome-4.2.0/css/font-awesome.css" %}">
   <!--  Local Styles -->
   <link rel="stylesheet" href="{% static "css/base.css" %}">
-  <link rel="stylesheet" href="{% static "css/social-buttons.css" %}">
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300%7cDroid+Sans%7cRoboto+Slab:100,300,400%7cNoto+Sans:400,400italic,700" rel="stylesheet" type="text/css">
   <!-- Google link between site and g+ page -->
   <link rel="publisher" href="{{ google_plus_url }}">
   <script src="http://malsup.github.com/jquery.form.js"></script>
@@ -71,7 +68,6 @@
   </script>
   {% include 'navbar/nav_bar.html' %}
   <div id='base_body_wrapper'>
-{#    {% include 'call_to_action/call_to_action.html' %}  #}
     {% placeholder base_content %}
     {% block body_block %}{% endblock %}
   </div>

@@ -1,0 +1,39 @@
+{% load cms_tags %}
+
+<form id='contact_form' role='form' action="." method="post">
+	{% csrf_token %}
+	<ul>
+		<li>
+			{% if contact_form.first_name.errors %}
+			{{ contact_form.first_name.errors }}
+			<input class='error_field' id="{{ contact_form.first_name.id_for_label }}" name="{{ contact_form.first_name.label }}" type="text" placeholder=" {{ contact_form.first_name.label }}" />
+			{% else %}
+			<input id="{{ contact_form.first_name.id_for_label }}" name="{{ contact_form.first_name.label }}" type="text" placeholder=" {{ contact_form.first_name.label }}" />
+			{% endif %}
+		</li>
+		<li>
+			{% if contact_form.phone.errors %}
+			{{ contact_form.phone.errors }}
+			<input id="{{ contact_form.phone.id_for_label }}" name="{{ contact_form.phone.label }}" type="text" placeholder=" {{ contact_form.phone.label }}" />
+			{% else %}
+			<input id="{{ contact_form.phone.id_for_label }}" name="{{ contact_form.phone.label }}" type="text" placeholder=" {{ contact_form.phone.label }}" />
+			{% endif %}
+		</li>
+		<li>
+			{% if contact_form.email.errors %}
+			{{ contact_form.email.errors }}
+			<input id="{{ contact_form.email.id_for_label }}" name="{{ contact_form.email.label }}" type="text" placeholder=" {{ contact_form.email.label }}" />
+			{% else %}
+			<input id="{{ contact_form.email.id_for_label }}" name="{{ contact_form.email.label }}" type="text" placeholder=" {{ contact_form.email.label }}" />
+			{% endif %}
+		</li>
+		<li>
+			{{ contact_form.inquiry_type.label_tag }}
+			{{ contact_form.inquiry_type }}
+		</li>
+		<li>
+			<textarea id="{{ contact_form.message.id_for_label }}" name="{{ contact_form.message.label }}" placeholder=" {{ contact_form.message.label }}" value="default message text"></textarea>
+		</li>
+	</ul>
+    <input type="submit" name='contact' class='btn green' value="Send message" />
+</form>

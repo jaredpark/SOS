@@ -1,34 +1,48 @@
 {% load static %}
 {% load cms_tags %}
 
-<header class="navbar navbar-default navbar-static-top custom-navbar" role="navigation">
-  <div class="container-fluid">
+<header id="myNavbar">
+  <div class="myContainer">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span style=''>Menu</span>
       </button>
-      <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}"></a>
-    </div>
-    <nav class="navbar-collapse collapse custom-navbar theme-text" role="navigation">
-      <ul class="nav navbar-nav navbar-right">
-        {% if user.is_authenticated %}
-        <li><a href="{% page_url 'user_profile' %}">My Account</a></li>
-        {% else %}
-        <div id='signup_login'>
-          <a class='btn btnn-sm btn-default' href="{% url 'registration_register' %}">Sign Up</a>
-          <a class='btn btn-sm btn-primary' href="{% url 'auth_login' %}" style='margin-right:5px'>Log In</a>
+      {% comment %}
+      <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
+      {% endcomment %}
+      <div class='nav_top_row logo'>
+        <h1 style='margin-top: 14px; color: white; font-size:28px'><b>SOS</b> Pool Rescue</h1>
+      </div>
+      <div class='nav_top_row call'>
+        <div><a id='call' class='btn green' href='tel:{{ company_phone_link }}'>Tap to Call</a></div>
+        <div id='phone'>{{ company_phone_text }}</div>
+      </div>
+      <div class='nav_top_row contact'>
+        <div class="panel-group" id="navbar-contact" role="tablist" aria-multiselectable="true">
+          <div role="tab">
+            <a class="btn green" data-toggle="collapse" data-parent="#navbar-contact" href="#navbar-contact-1" aria-expanded="false" aria-controls="navbar-contact-1">
+              Schedule Now
+            </a>
+          </div>
+          <div id="navbar-contact-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              {% static_placeholder 'quick_contact' %}
+            </div>
+          </div>
         </div>
-        {% endif %}
-        <li><a href="{% page_url navbar_link1_name %}"> {{ navbar_link1_text }} </a>
-          <ul class='navbar-default dropdown-menu' role='menu'>
-            <li><a href="{% page_url sublink1_name %}">{{sublink1_text}}</a></li>
-            <li><a href="{% page_url sublink2_name %}">{{sublink2_text}}</a></li>
-            <li><a href="{% page_url sublink3_name %}">{{sublink3_text}}</a></li>
-          </ul>
-        </li>
+      </div>
+    </div>
+  </div>
+  <div class='myContainer navbar_link_container'>
+    <nav class="navbar-collapse collapse" id="navbar_links">
+      <ul class="nav navbar-nav">
+        <li><a href="{% page_url navbar_link1_name %}"> {{ navbar_link1_text }} </a></li>
         <li><a href="{% page_url navbar_link2_name %}"> {{ navbar_link2_text }} </a></li>
         <li><a href="{% page_url navbar_link3_name %}"> {{ navbar_link3_text }} </a></li>
+        <li><a href="{% page_url navbar_link4_name %}"> {{ navbar_link4_text }} </a></li>
+        <li><a href="{% page_url navbar_link5_name %}"> {{ navbar_link5_text }} </a></li>
+        <li><a href="{% page_url navbar_link6_name %}"> {{ navbar_link6_text }} </a></li>
       </ul>
     </nav>
   </div>

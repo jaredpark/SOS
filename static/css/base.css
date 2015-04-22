@@ -38,6 +38,15 @@ ul {
 	float: left;
 }
 
+.half-col {
+	width: 48%;
+	margin: 0 4% 0 0;
+}
+
+.half-col.last {
+	margin-right: 0;
+}
+
 .one-third-col {
 	width: 30%;
 }
@@ -63,15 +72,126 @@ ul {
 	background-color: #1a9c63;
 }
 
+#yelp {
+	width: 480px !important;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+#yelptitle {
+	margin-bottom: 10px;
+}
+
+.reviewername {
+	margin-top: 3px;
+}
+
+/* page content */
+
 .page_content {
-	padding-bottom: 30px;
+	padding: 30px 0 20px;
+	min-height: 800px;
+}
+
+.page_content p {
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+
+.page_content h1 {
+	font-size: 28px;
+	color: #1F324B;
+	padding: 0;
+	margin: 0 0 10px;
+	text-align: center;
+}
+
+.page_content h2 {
+	font-size: 24px;
+	color: #34445B;
+	padding: 0;
+	margin: 0 0 10px;
+}
+
+.page_content ul.content_list {
+	list-style: inherit;
+}
+
+.page_content .content_list li {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.page_content .page-bottom-contact {
+	text-align:center;
+	margin: 30px 0 40px;
+}
+
+/* weekly services table */
+
+th {
+	text-align: center;
+	width: 80px;
+	height: 85px;
+	vertical-align: bottom;
+	font-size: 18px;
+}
+
+tr {
+	height: 35px;
+}
+
+tr:hover {
+	background-color: #fafbfc;
+}
+
+tr.th_row:hover {
+	background-color: white;
+}
+
+.gold_star {
+	background: url('../images/star-gold.png') center top no-repeat;
+	background-size: 60px;
+}
+
+.silver_star {
+	background: url('../images/star-silver.png') center top no-repeat;
+	background-size: 60px;
+}
+
+.bronze_star {
+	background: url('../images/star-bronze.png') center top no-repeat;
+	background-size: 60px;
+}
+
+.check {
+	background: url('../images/check.png') center center no-repeat;
+	background-size: 18px 18px;
 }
 
 		/*nav bar*/
 
+#base_body_wrapper {
+	margin-top: 112px;
+}
+
+.navbar_top {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-top: 8px solid #3360a3;
+}
+
 #myNavbar {
 	background-color: #3360a3;
-	border-bottom: 20px solid white;
+	min-height: 102px;
+	position: fixed;
+	top: 10px;
+	z-index: 100;
+	width: 100%;
 }
 
 .navbar_link_container {
@@ -130,7 +250,7 @@ ul {
 .homepage_hero_container {
 	background: #3360a3;
 	width: 100%;
-	padding: 40px 0;
+	padding-bottom: 40px;
 }
 
 .homepage_image {

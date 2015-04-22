@@ -78,9 +78,10 @@ TEMPLATE_DIRS = [
 CMS_TEMPLATES = (
     ('cms/index.html', gettext('Index')),
     ('cms/base_no_sidebar.html', gettext('Base No Sidebar')),
-    ('cms/base_sidebar_left.html', gettext('Base Sidebar L')),
-    ('cms/base_sidebar_both.html', gettext('Base Sidebar L+R')),
-    ('cms/base_sidebar_left_pills.html', gettext('Base Sidebar L Pills')),
+    ('cms/weekly_services.html', gettext('Weekly Service')),
+    ('cms/repair.html', gettext('Repair')),
+    ('cms/about.html', gettext('About')),
+    ('cms/all_services.html', gettext('All Services')),
 )
 
 CMS_PLACEHOLDER_CONF = {

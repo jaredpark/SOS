@@ -6,12 +6,12 @@
 {% block body_block %}
 	<div class='page_content'>
 		<div class='myContainer'>
-			<div class='col'>
-				{% block page_content_block %}
-				{% placeholder 'page_content' %}
-				{% endblock page_content_block %}
-			</div>
+			{% block page_content_block %}
+			{% placeholder 'page_content' %}
+			{% endblock page_content_block %}
 		</div>
-		<div class='row'></div>
+		<div style='margin:20px auto 0;'>
+			<div id='yelpwidget'></div>
+		</div>
 	</div>
 {% endblock body_block %}

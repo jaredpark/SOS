@@ -1,0 +1,42 @@
+{% extends 'cms/base.html' %}
+
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+<div class='page_content'>
+	<div class='myContainer'>
+		<h1>All Services</h1>
+		<p>All of our pool services are performed by certified and experienced technicians with decades of pool service and repair experience. We have helped hundreds of Phoenix area pool owners keep their pool running smooth with simple billing that won't break the bank.</p>
+		<h2>All Services Offered</h2>
+		<div class='row'>
+			<div class='half-col col'>
+				<ul class='content_list'>
+					<li><a href='{% page_url 'pool_service' %}'>Weekly Service</a></li>
+					<li>Pool and Deck Resurfacing</li>
+					<li>Acid Washing</li>
+					<li>Tile Cleaning</li>
+					<li>Water Feature Construction</li>
+					<li>Pool Inspections for Home Buyers</li>
+				</ul>
+			</div>
+			<div class='half-col col last'>
+				<ul class='content_list'>
+					<li><a href='{% page_url 'pool_repair' %}'>Repairs</a></li>
+					<li>Pool School for new pool owners</li>
+					<li>Water Change</li>
+					<li>Startup Chemicals</li>
+					<li>Leak Diagnosis and Repair</li>
+					<li>Pumps, motors, timers, heaters, and more</li>
+				</ul>
+			</div>
+		</div>
+		<div class='page-bottom-contact'>
+			<a class='btn green' href='{% page_url 'contact' %}'>Get in touch today</a>
+		</div>
+		<div style='margin:20px auto 0;'>
+			<div id='yelpwidget'></div>
+		</div>
+	</div>
+</div>
+{% endblock body_block %}

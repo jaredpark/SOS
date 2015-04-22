@@ -1,0 +1,105 @@
+{% extends 'cms/base.html' %}
+
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+<div class='page_content'>
+	<div class='myContainer'>
+		<h1>Weekly Pool Cleaning Services</h1>
+		<p>All of our weekly pool cleaning services are backed by complete guarantees. We always leave a notice of our visit so you know we were there. We offer three services for you to choose from, with our basic service taking care of your pool's chemistry and our premium service covering all of your pool's maintenace needs:</p>
+		<table style='width:100%; max-width: 600px; margin: 0 auto;'>
+			<tr class='th_row'>
+				<th></th>
+				<th class='gold_star'>Gold</th>
+				<th class='silver_star'>Silver</th>
+				<th class='bronze_star'>Bronze</th>
+			</tr>
+			<tr>
+				<td>Vacuum walls</td>
+				<td class='check'></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Brush walls</td>
+				<td class='check'></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Brush steps</td>
+				<td class='check'></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Brush tile line</td>
+				<td class='check'></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Net pool</td>
+				<td class='check'></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Clean skimmer</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Clean baskets</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Backwash filter</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Check equipment</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Clean pool sweep</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Test pool chemistry</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td class='check'></td>
+			</tr>
+			<tr>
+				<td>Balance pool chemistry</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td class='check'></td>
+			</tr>
+			<tr>
+				<td>All chemicals included</td>
+				<td class='check'></td>
+				<td class='check'></td>
+				<td class='check'></td>
+			</tr>
+		</table>
+		<div class='page-bottom-contact'>
+			<a class='btn green' href='{% page_url 'contact' %}'>Get in touch today</a>
+		</div>
+		<div style='margin:20px auto 0;'>
+			<div id='yelpwidget'></div>
+		</div>
+	</div>
+</div>
+{% endblock body_block %}

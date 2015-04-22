@@ -46,7 +46,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-60122507-1', 'auto');
+    ga('create', '', 'auto');
     ga('send', 'pageview');
     -->
   </script>
@@ -71,9 +71,9 @@
     {% placeholder base_content %}
     {% block body_block %}{% endblock %}
   </div>
+  {% include 'footer/footer.html' %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
   <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
   {% render_block "js" %}
 </body>
-{% include 'footer/footer.html' %}
 </html>

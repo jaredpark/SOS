@@ -6,26 +6,24 @@
 
 {% block page_content_block %}
 {% static_placeholder 'main_image' %}
-<div class='page_content'>
-	<h1 style='margin: 10px 0 20px; font-size: 32px; text-align: center;'>Get In Touch Today</h1>
-	<div style='float: left; width: 100%; text-align: center;'>
-	    <div class='col-sm-6'>
-			{% if contact_form %}
-			{% include 'contact/contact_form.html' %}
-			{% else %}
-			<h4 style='text-align:center;'>Message received - we'll get in touch in the next 24 hours.</h4>
-			<p style='text-align:center;'>For now, take a look at the rest of our <a href='{% page_url 'all_pool_services' %}'>services</a>.</p>
-			{% endif %}
-		</div>
-		<div class='col-sm-6'>			
-	        <iframe id='google_map' alt="Google Map" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=3026%20S%20Paseo%20Loma%20Circle%2C%20Mesa%2C%20AZ%2085202&key=AIzaSyDCkjnfCeHnozt6AR3tq5JxaGn_JwDxo7M"></iframe>
-	    </div>
+<h1>Get In Touch Today</h1>
+<div style='float: left; width: 100%; text-align: center;'>
+    <div class='col-sm-6'>
+		{% if contact_form %}
+		{% include 'contact/contact_form.html' %}
+		{% else %}
+		<h4 style='text-align:center;'>Message received - we'll get in touch in the next 24 hours.</h4>
+		<p style='text-align:center;'>For now, take a look at the rest of our <a href='{% page_url 'all_pool_services' %}'>services</a>.</p>
+		{% endif %}
 	</div>
-	<address style='float: left; width: 100%; text-align: center; margin: 30px auto 0'>
-		<p style='font-size:20px'>{{ company_name }}</h4>
-	    <p>{{ company_phone_text }}</p>
-	    <p>{% include 'misc_pages/email.html' %}</p>
-	    <p>{{ company_address }}</p>
-	</address>
+	<div class='col-sm-6'>			
+        <iframe id='google_map' alt="Google Map" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=3026%20S%20Paseo%20Loma%20Circle%2C%20Mesa%2C%20AZ%2085202&key=AIzaSyDCkjnfCeHnozt6AR3tq5JxaGn_JwDxo7M"></iframe>
+    </div>
 </div>
+<address style='float: left; width: 100%; text-align: center; margin: 30px auto;'>
+	<p style='font-size:20px'>{{ company_name }}</h4>
+    <p>{{ company_phone_text }}</p>
+    <p>{% include 'misc_pages/email.html' %}</p>
+    <p>{{ company_address }}</p>
+</address>
 {% endblock page_content_block %}

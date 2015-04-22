@@ -1,0 +1,20 @@
+{% extends 'cms/base.html' %}
+
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+<div class='page_content'>
+	<div class='myContainer'>
+		<h1>About Us</h1>
+		<p>SOS Pool Rescue has been proudly serving the Phoenix area since 2009 with hundreds of happy customers. We are locally owned and operated and experienced in all aspects of swimming pool care and maintenance, equipment repair and pool inspections for homebuyers and sellers.</p>
+		<p>We are known for personal service, our knowledgeable and friendly techicians, and our fair and easy to understand billing.</p>
+		<div class='page-bottom-contact'>
+			<a class='btn green' href='{% page_url 'contact' %}'>Get in touch today</a>
+		</div>
+		<div style='margin:20px auto 0;'>
+			<div id='yelpwidget'></div>
+		</div>
+	</div>
+</div>
+{% endblock body_block %}

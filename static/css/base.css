@@ -140,16 +140,16 @@ th {
 }
 
 tr.th_row {
-	height: 60px;
+	height: 50px;
 	background-color: #3360a3;
 	border-radius: 5px;
 }
 
 tr {
-	height: 35px;
+	height: 45px;
 }
 
-tr:not(.th_row):hover {
+tr:hover:not(.th_row):not(.icon_row) {
 	background-color: #fafbfc;
 }
 
@@ -181,6 +181,35 @@ tbody tr.first td {
 tr.first td.check {
 	background: url('../images/check.png') center 23px no-repeat;
 	background-size: 18px 18px;
+}
+
+.icon_header {
+	text-align: center;
+}
+
+.icon_header img {
+	margin: 0 auto -20px;
+}
+
+
+@media (max-width: 480px) {
+	table tbody {
+		font-size: 14px;
+	}
+	tr {
+		height: 55px;
+	}
+	th {
+		font-size: 16px;
+	}
+	tr.icon_row {
+		height: 35px;
+	} 
+	.icon_header img {
+		margin: 0 auto -20px;
+		width: 100px;
+	}
+
 }
 
 		/*nav bar*/
@@ -403,7 +432,6 @@ address p {
 	width: 12px;
 }
 
-
 @media (min-width: 768px) {
 	#navbar_links {
 		display: inline-block !important;
@@ -422,6 +450,12 @@ address p {
 
 	#homepage_service_section img {
 		width: 160px;
+	}
+}
+
+@media (max-width: 919px) {
+	.myContainer {
+		padding: 0 20px;
 	}
 }
 

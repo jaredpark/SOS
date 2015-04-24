@@ -131,23 +131,31 @@ ul {
 /* weekly services table */
 
 th {
+	width: 200px;
 	text-align: center;
-	width: 80px;
-	height: 85px;
-	vertical-align: bottom;
+	vertical-align: middle;
 	font-size: 18px;
+	color: #eee;
+	font-weight: 300;
+}
+
+tr.th_row {
+	height: 60px;
+	background-color: #3360a3;
+	border-radius: 5px;
 }
 
 tr {
 	height: 35px;
 }
 
-tr:hover {
+tr:not(.th_row):hover {
 	background-color: #fafbfc;
 }
 
-tr.th_row:hover {
-	background-color: white;
+tbody tr.first td {
+	padding-top: 15px;
+	height: 50px;
 }
 
 .gold_star {
@@ -167,6 +175,11 @@ tr.th_row:hover {
 
 .check {
 	background: url('../images/check.png') center center no-repeat;
+	background-size: 18px 18px;
+}
+
+tr.first td.check {
+	background: url('../images/check.png') center 23px no-repeat;
 	background-size: 18px 18px;
 }
 

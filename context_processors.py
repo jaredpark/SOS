@@ -9,7 +9,7 @@ def site_settings_processor(request):
 		'company_name': 'SOS Pool Rescue',
 		'company_short': 'SOS',
 		'footer_copyright': 'SurgeSite, 2015',
-		'logo_file_name': 'images/sos.jpg',
+		'logo_file_name': 'images/logo.png',
 		'site_email': 'jared@SurgeSite.com',
 		# if email changes, update misc_pages/email.html
 		'company_phone_text': '480-309-3181',

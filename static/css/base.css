@@ -74,6 +74,7 @@ ul {
 
 #yelp {
 	width: 480px !important;
+	max-width: 100%;
 	font-size: 16px;
 	margin: 0 auto;
 }
@@ -214,8 +215,13 @@ tr.first td.check {
 
 		/*nav bar*/
 
+#myNavbar .custom-logo img {
+	width: 100px;
+	padding-top: 10px;
+}
+
 #base_body_wrapper {
-	margin-top: 112px;
+	margin-top: 162px;
 }
 
 .navbar_top {
@@ -229,9 +235,8 @@ tr.first td.check {
 
 #myNavbar {
 	background-color: #3360a3;
-	min-height: 102px;
 	position: fixed;
-	top: 10px;
+	top: 12px;
 	z-index: 100;
 	width: 100%;
 }
@@ -259,7 +264,7 @@ tr.first td.check {
 }
 
 #navbar-contact {
-	margin: 9px auto 0;
+	margin: 19px auto 0;
 }
 
 #navbar-contact label {
@@ -279,8 +284,8 @@ tr.first td.check {
 	font-size: 20px; 
 	text-align: center; 
 	width: auto; 
-	margin: 20px auto 0; 
-	color: #eee;
+	margin: 30px auto 0; 
+	color: #e8efec;
 }
 
 #call {
@@ -292,6 +297,7 @@ tr.first td.check {
 .homepage_hero_container {
 	background: #3360a3;
 	width: 100%;
+	padding-top: 20px;
 	padding-bottom: 40px;
 }
 
@@ -322,7 +328,7 @@ tr.first td.check {
 }
 
 #homepage_service_section h3 {
-	color: #3360a3;
+	color: #555;
 	font-weight: 500;
 	margin: 0px auto 15px;
 }
@@ -332,7 +338,7 @@ tr.first td.check {
 }
 
 #homepage_under_hero {
-	padding: 60px 0;
+	padding: 30px 0;
 }
 
 #homepage_under_hero h2 {
@@ -460,10 +466,17 @@ address p {
 }
 
 @media (max-width: 767px) {
+	.one-third-col {
+		width: 95%;
+		margin: 0 auto 15px !important;
+	}
+	.one-third-col.last {
+		margin-bottom: 0 !important;
+	}
 	.navbar-toggle {
 		position: absolute;
 		right: 20px;
-		top: 3px;
+		top: 18px;
 		background: #E4EEFB;
 	}
 	#call {
@@ -482,11 +495,14 @@ address p {
 	#navbar_links {
 		margin: 0 auto;
 	}
+	#myNavbar .custom-logo img {
+	  margin: 0 auto;
+	  padding-bottom: 10px;
+	}
 	.nav_top_row.logo {
 		width: 100%;
-		margin: 0 auto;
-		text-align: center;
 	}
+
 	.nav_top_row.call, .nav_top_row.contact {
 		width: 50%;
 		text-align: center;
@@ -498,11 +514,6 @@ address p {
 	#homepage_service_section img {
 		width: 120px;
 	}
-	#homepage_service_section h3 {
-		color: #3360a3;
-		font-weight: 500;
-		font-size: 18px;
-	}
 }
 
 @media (max-width: 480px) {
@@ -512,12 +523,11 @@ address p {
 		font-size: 14px;
 	}
 	.navbar-toggle {
-		right: 0;
-		top: 0;
+		right: -25px;
+		top: 19px;
 	}
-	.nav_top_row.logo {
-		margin-left: 15px;
-		text-align: left;
+	#myNavbar .custom-logo img {
+	  margin: 0 0 0 30%;
 	}
 	.nav_top_row.logo h1 {
 		font-size: 20px !important;
@@ -533,12 +543,16 @@ address p {
 		bottom: 0px;
 		font-size:12px;
 	}
-	.one-third-col {
-		width: 95%;
-		margin: 0 auto !important;
-	}
 	#homepage_service_section img {
 		width: 180px;
 	}
 
+}
+
+@media (max-width: 375px){
+
+	.homepage_hero_container {
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
 }

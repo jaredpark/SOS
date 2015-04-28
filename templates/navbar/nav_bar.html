@@ -9,14 +9,14 @@
         <span class="sr-only">Toggle navigation</span>
         <span style=''>Menu</span>
       </button>
-      {% comment %}
-      <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
-      {% endcomment %}
       <div class='nav_top_row logo'>
-        <h1 style='margin-top: 14px; color: white; font-size:28px'><b>SOS</b> Pool Rescue</h1>
+        <a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
       </div>
+      {% comment %}
+      <h1 style='margin-top: 14px; color: white; font-size:28px'><b>SOS</b> Pool Rescue</h1>
+      {% endcomment %}
       <div class='nav_top_row call'>
-        <div><a id='call' class='btn green' href='tel:{{ company_phone_link }}'>Tap to Call</a></div>
+        <div><a id='call' class='btn green' href='tel:{{ company_phone_link }}'>Call Now</a></div>
         <div id='phone'>{{ company_phone_text }}</div>
       </div>
       <div class='nav_top_row contact'>

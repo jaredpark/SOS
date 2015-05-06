@@ -2,7 +2,7 @@
 {% load cms_tags %}
 {% load menu_tags %}
 
-<footer id='myFooter'>
+<footer id='myFooter' class='row'>
 	<div class = 'myContainer'>
 		<div class='col one-third-col first'>
 			<a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
@@ -11,8 +11,9 @@
 			<a href="http://www.SurgeSite.com" style='font-size: 12px;'>Created by SurgeSite</a>
 		</div>
 		<div class='col one-third-col'>
+			<h3 style='color: #ddd; text-align: center; margin-top: 0'>Sitemap</h3>
 			<nav id='footer_nav'>
-		    {% show_menu 0 100 100 100 %}
+				<ul>{% show_menu 0 100 100 100 %}</ul>
 			</nav>
 		</div>
 		<div id='footer-contact' class='col one-third-col last'>

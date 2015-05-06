@@ -2,10 +2,10 @@
 {% load cms_tags %}
 
 {% if quick_contact_form %}
-<form role="form" method="post" action='{% page_url 'contact' %}'>
-{% csrf_token %}
-{{ quick_contact_form|crispy }}
-<input type="submit" name="contact" class="btn green">
+<form class='quick_contact_form' role='form' action='{% url 'contact' %}' method="post">
+	{% csrf_token %}
+	{{ quick_contact_form | crispy }}
+    <input type="submit" name='contact' class='btn green' value="Send message" />
 </form>
 {% else %}
 Thanks for getting in touch

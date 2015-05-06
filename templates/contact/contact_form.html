@@ -5,34 +5,35 @@
 	<ul>
 		<li>
 			{% if contact_form.first_name.errors %}
-			{{ contact_form.first_name.errors }}
-			<input class='error_field' id="{{ contact_form.first_name.id_for_label }}" name="{{ contact_form.first_name.label }}" type="text" placeholder=" {{ contact_form.first_name.label }}" />
+			<input class='error_field' id="{{ contact_form.first_name.id_for_label }}" name="first_name" type="text" placeholder="{{ first_name_placeholder }}" value = "{{ first_name_value }}" />
 			{% else %}
-			<input id="{{ contact_form.first_name.id_for_label }}" name="{{ contact_form.first_name.label }}" type="text" placeholder=" {{ contact_form.first_name.label }}" />
+			<input id="{{ contact_form.first_name.id_for_label }}" name="first_name" type="text" placeholder=" {{ first_name_placeholder }}" value = "{{ first_name_value }}"/>
 			{% endif %}
 		</li>
 		<li>
 			{% if contact_form.phone.errors %}
-			{{ contact_form.phone.errors }}
-			<input id="{{ contact_form.phone.id_for_label }}" name="{{ contact_form.phone.label }}" type="text" placeholder=" {{ contact_form.phone.label }}" />
+			<input class='error_field' id="{{ contact_form.phone.id_for_label }}" name="phone" type="text" placeholder=" {{ phone_placeholder }}" value = "{{ phone_value }}"/>
 			{% else %}
-			<input id="{{ contact_form.phone.id_for_label }}" name="{{ contact_form.phone.label }}" type="text" placeholder=" {{ contact_form.phone.label }}" />
+			<input id="{{ contact_form.phone.id_for_label }}" name="phone" type="text" placeholder=" {{ phone_placeholder }}" value = "{{ phone_value }}"/>
 			{% endif %}
 		</li>
 		<li>
 			{% if contact_form.email.errors %}
-			{{ contact_form.email.errors }}
-			<input id="{{ contact_form.email.id_for_label }}" name="{{ contact_form.email.label }}" type="text" placeholder=" {{ contact_form.email.label }}" />
+			<input class='error_field' id="{{ contact_form.email.id_for_label }}" name="email" type="text" placeholder=" {{ email_placeholder }}" value = "{{ email_value }}"/>
 			{% else %}
-			<input id="{{ contact_form.email.id_for_label }}" name="{{ contact_form.email.label }}" type="text" placeholder=" {{ contact_form.email.label }}" />
+			<input id="{{ contact_form.email.id_for_label }}" name="email" type="text" placeholder=" {{ email_placeholder }}" value = "{{ email_value }}"/>
 			{% endif %}
 		</li>
 		<li>
+			{% if contact_form.inquiry_type.errors %}
+			<span class='error_field'>Please tell us what type of service/s you need so we can best assist you</span>
+			{% else %}
 			{{ contact_form.inquiry_type.label_tag }}
+			{% endif %}
 			{{ contact_form.inquiry_type }}
 		</li>
 		<li>
-			<textarea id="{{ contact_form.message.id_for_label }}" name="{{ contact_form.message.label }}" placeholder=" {{ contact_form.message.label }}" value="default message text"></textarea>
+			<textarea id="{{ contact_form.message.id_for_label }}" name="message" placeholder=" {{ message_placeholder }}" value="default message text"></textarea>
 		</li>
 	</ul>
     <input type="submit" name='contact' class='btn green' value="Send message">

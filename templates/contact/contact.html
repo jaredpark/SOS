@@ -10,10 +10,11 @@
 <div style='float: left; width: 100%; text-align: center;'>
     <div class='col-sm-6'>
 		{% if contact_form %}
-		{% include 'contact/contact_form.html' %}
-		{% else %}
-		<h4 style='text-align:center;'>Message received - we'll get in touch in the next 24 hours.</h4>
-		<p style='text-align:center;'>For now, take a look at the rest of our <a href='{% page_url 'all_pool_services' %}'>services</a>.</p>
+			{% include 'contact/contact_form.html' %}
+		{% endif %}
+		{% if first_name %}
+			<h4 style='text-align:center;'>Got it {{ first_name }} - we'll be in touch within one business day.</h4>
+			<p style='text-align:center;'>For now, take a look at the rest of our <a href='{% page_url 'all_services' %}'>services</a>.</p>
 		{% endif %}
 	</div>
 	<div class='col-sm-6'>			

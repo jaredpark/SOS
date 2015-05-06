@@ -4,10 +4,10 @@ class ContactForm(forms.Form):
 	error_css_class = 'error'
 	required_css_class = 'required'
 	first_name = forms.CharField(label='Your First Name', required=True)
-	last_name = forms.CharField(label='Your Last Name', required=True)
+	last_name = forms.CharField(label='Your Last Name', required=False)
 	address = forms.CharField(label='Street Address', required=False)
 	zipcode = forms.IntegerField(label='Zip Code', required=False)
-	inquiry_type = forms.MultipleChoiceField(label='What types of services do you need?', choices=(('Pool Repair','Pool Repair'), ('Pool Cleaning Service', 'Pool Cleaning Service'), ('Home Repair', 'Home Repair')),
+	inquiry_type = forms.MultipleChoiceField(label='What types of services do you need?', choices=(('Pool Repair','Pool Repair'), ('Pool Cleaning Service', 'Pool Cleaning Service'), ('Other', 'Other')),
 		widget = forms.CheckboxSelectMultiple(), required=True)
 	phone = forms.CharField(label='Your Phone Number (optional)', required=False)
 	email = forms.EmailField(label='Your Email Address', required=True)

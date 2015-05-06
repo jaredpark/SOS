@@ -10,7 +10,7 @@ def site_settings_processor(request):
 		'company_short': 'SOS',
 		'footer_copyright': 'SurgeSite, 2015',
 		'logo_file_name': 'images/logo.png',
-		'site_email': 'jared@SurgeSite.com',
+		'site_email': 'saramirez@gmail.com',
 		# if email changes, update misc_pages/email.html
 		'company_phone_text': '480-309-3181',
 		'company_phone_link': '14803093181',

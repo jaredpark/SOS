@@ -218,6 +218,7 @@ tr.first td.check {
 #myNavbar .custom-logo img {
 	width: 100px;
 	padding-top: 10px;
+	margin: 0 auto;
 }
 
 #base_body_wrapper {
@@ -263,11 +264,11 @@ tr.first td.check {
 	float: none;
 }
 
-#navbar-contact {
+#navbar-contact, #footer-contact {
 	margin: 19px auto 0;
 }
 
-#navbar-contact label {
+#navbar-contact label, #footer-contact label {
 	color: white;
 	font-weight: 100;
 }
@@ -365,7 +366,7 @@ tr.first td.check {
 		/* footer */
 #myFooter {
 	text-align:center;
-	height: 120px;
+	height: 480px;
 	padding: 25px 0 0;
 	background-color: #3360a3;
 }
@@ -375,6 +376,17 @@ tr.first td.check {
 	letter-spacing: 1.25px;
 	color: white;
 	font-weight: 300;
+}
+
+#myFooter .custom-logo img {
+	width: 240px;
+	margin: 0 auto 20px;
+}
+
+#footer_nav {
+	text-align: left;
+	margin-left: 10px;
+	list-style: none;
 }
 
 		/* Contact */
@@ -486,7 +498,7 @@ address p {
 	#phone {
 		display: none;
 	}
-	#navbar-contact {
+	#navbar-contact, #footer-contact {
 		margin: 0;
 	}
 	.navbar_link_container {

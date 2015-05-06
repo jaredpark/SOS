@@ -5,7 +5,7 @@
 <form role="form" method="post" action='{% page_url 'contact' %}'>
 {% csrf_token %}
 {{ quick_contact_form|crispy }}
-<input type="submit" name="contact" class="btn green"></input>
+<input type="submit" name="contact" class="btn green">
 </form>
 {% else %}
 Thanks for getting in touch

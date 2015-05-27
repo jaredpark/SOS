@@ -222,7 +222,7 @@ tr.first td.check {
 }
 
 #base_body_wrapper {
-	margin-top: 162px;
+	margin-top: 145px;
 }
 
 .navbar_top {
@@ -294,23 +294,35 @@ tr.first td.check {
 
 		/* homepage hero */
 
+.homepage_bg {
+	background: url('../images/para_diag.jpg') center top repeat;
+	padding: 30px;
+	border-bottom: 1px solid #aaa;
+}
+
+.myContainer.white {
+	background-color: white;
+	padding-right: 30px;
+	padding-left: 30px;
+	border: 1px solid #bbb;
+}
+
 .homepage_hero_container {
-	background: #3360a3;
 	width: 100%;
 	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 0px;
 }
 
 .homepage_image {
-	background: url('../images/hero_sketch.png') center center no-repeat;
+	background: url('../images/hero.png') center center no-repeat;
 	height: 420px;
 	position: relative;
 }
 
 .homepage_image .btn.green {
 	position: absolute;
-	left: 80px;
-	bottom: 40px;
+	left: 280px;
+	bottom: 15px;
 }
 
 #homepage_service_section {

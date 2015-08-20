@@ -1,0 +1,13 @@
+{% extends "cms/base.html" %}
+{% load static %}
+{% load cms_tags %}
+
+{% block body_block %}
+	<div class='homepage_bg'>
+  		<div class='myContainer white'>
+			{% include 'homepage/homepage_image.html' %}
+			{% include 'homepage/homepage_content_2.html' %}
+		</div>
+	</div>
+	{% include 'homepage/homepage_content.html' %}
+{% endblock %}

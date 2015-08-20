@@ -13,6 +13,13 @@ body {
 	position: relative;
 	cursor: default;
 	text-rendering: optimizeLegibility;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.site-content {
+	flex: 1;
 }
 
 a {
@@ -64,7 +71,7 @@ ul {
 	color: white;
 	border-radius: 0;
 	padding: 10px 20px;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 16px;
 }
 
@@ -91,7 +98,7 @@ ul {
 
 .page_content {
 	padding: 30px 0 20px;
-	min-height: 800px;
+	min-height: 300px;
 }
 
 .page_content p {
@@ -142,7 +149,7 @@ th {
 
 tr.th_row {
 	height: 50px;
-	background-color: #3360a3;
+	background-color: #0066B4;
 	border-radius: 5px;
 }
 
@@ -150,8 +157,14 @@ tr {
 	height: 45px;
 }
 
-tr:hover:not(.th_row):not(.icon_row) {
+td { padding-left: 5px;}
+
+/*tr:hover:not(.th_row):not(.icon_row) {
 	background-color: #fafbfc;
+}*/
+
+tr:nth-child(even):not(.th_row) {
+    background-color: #f0f0f0;
 }
 
 tbody tr.first td {
@@ -231,11 +244,11 @@ tr.first td.check {
 	top: 0;
 	left: 0;
 	width: 100%;
-	border-top: 8px solid #3360a3;
+	border-top: 8px solid #0066B4;
 }
 
 #myNavbar {
-	background-color: #3360a3;
+	background-color: #0066B4;
 	position: fixed;
 	top: 12px;
 	z-index: 100;
@@ -248,7 +261,7 @@ tr.first td.check {
 
 #navbar_links a, #myFooter a {
 	color: white;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 18px;
 }
 
@@ -270,7 +283,7 @@ tr.first td.check {
 
 #navbar-contact label, #footer-contact label {
 	color: white;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .nav_top_row {
@@ -292,7 +305,7 @@ tr.first td.check {
 	display: none;
 }
 
-		/* homepage hero */
+		/* homepage  */
 
 .homepage_bg {
 	background: url('../images/para_diag.jpg') center top repeat;
@@ -314,19 +327,25 @@ tr.first td.check {
 }
 
 .homepage_image {
-	background: url('../images/hero.png') center center no-repeat;
+/*	background: url('../images/chillin.jpg') center center no-repeat;
 	height: 420px;
+	position: relative;*/
+	text-align: center;
+	height: auto;
 	position: relative;
 }
 
+.homepage_image>img {
+	width:100%;
+	max-width: 1800px;
+}
+
 .homepage_image .btn.green {
-	position: absolute;
-	left: 280px;
-	bottom: 15px;
+	margin-top: -140px;
 }
 
 #homepage_service_section {
-	background-color: #f1f2f3;
+	background-color: #e9e1e1;
 	padding: 30px 0;
 }
 
@@ -335,8 +354,14 @@ tr.first td.check {
 	margin: 0 auto 20px;
 }
 
-#homepage_service_section a {
+#homepage_service_section a:link, #homepage_service_section a:visited {
 	font-weight: 500;
+	color: #004492;
+}
+
+#homepage_service_section a:hover, #homepage_service_section a:active, {
+	font-weight: 500;
+	color: #ffffff;
 }
 
 #homepage_service_section h3 {
@@ -356,7 +381,7 @@ tr.first td.check {
 #homepage_under_hero h2 {
 	font-size: 28px;
 	font-weight: 300;
-	color: #3360a3;
+	color: #004492;
 	margin: 0 auto 30px;
 }
 
@@ -368,17 +393,19 @@ tr.first td.check {
 
 #homepage_under_hero p {
 	font-size: 24px;
+	line-height: 30px;
 	font-weight: 300;
-	color: #3360a3;
+	color: #004492;
 	margin: 0 auto 30px;
 }
 
 
 		/* footer */
+
 #myFooter {
 	text-align:center;
 	padding: 25px 0 15px;
-	background-color: #3360a3;
+	background-color: #0066B4;
 }
 
 #myFooter a, #myFooter p {
@@ -423,6 +450,11 @@ tr.first td.check {
 ::-moz-placeholder {  /* Firefox 19+ */   color: #414c5c ; }
 :-ms-input-placeholder {  color: #414c5c ; }
 
+address.contact-page {
+	text-align: center;
+	margin: 20px 0;
+}
+
 address p {
 	margin: 5px 0;
 	line-height: 20px;
@@ -438,7 +470,7 @@ address p {
 
 #
 
-#contact_form label {
+form ul li label {
 	font-weight: 300;
 }
 

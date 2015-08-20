@@ -1,0 +1,35 @@
+{% load cms_tags %}
+{% load static %}
+
+<div id='homepage_service_section'>
+	<div class='myContainer'>
+		<div class='row'>
+		</div>
+		<div class='row' style='text-align:center;'>
+			<div class='col one-third-col first'>
+				<a href='{% page_url 'pool_service' %}'>
+					<h3>Weekly Service</h3>
+					<img src='{% static 'images/swimmer.png' %}' alt='Weekly Pool Service'>
+				</a>
+				<p>Our weekly pool cleaning services makes owning a pool worry-free with flat-rate monthly billing</p>
+				<p><a href='{% page_url 'pool_service' %}'>Weekly Pool Service</a></p>
+			</div>
+			<div class='col one-third-col'>
+				<a href='{% page_url 'pool_repair' %}'>
+					<h3>Repairs</h3>
+					<img src='{% static 'images/wrench.png' %}' alt='Pool Equipment Repairs'>
+				</a>
+				<p>Our qualified technicians are on-call for your emergency or preventative maintenance needs</p>
+				<p><a href='{% page_url 'pool_repair' %}'>Pool Repair</a></p>
+			</div>
+			<div class='col one-third-col last'>
+				<a href='{% page_url 'all_services' %}'>
+					<h3>Other Services</h3>
+					<img src='{% static 'images/pool.png' %}' alt='Other Pool Services'>
+				</a>
+				<p>Green-to-clean, new pool startups, custom water feature construction, and more</p>
+				<p><a href='{% page_url 'all_services' %}'>All Pool Services</a></p>
+			</div>
+		</div>
+	</div>
+</div>

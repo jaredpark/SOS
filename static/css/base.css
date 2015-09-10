@@ -345,7 +345,7 @@ tr.first td.check {
 }
 
 #homepage_service_section {
-	background-color: #e9e1e1;
+	background-color: #f1f2f2;
 	padding: 30px 0;
 }
 
@@ -436,9 +436,9 @@ tr.first td.check {
 }
 
 #myFooter .footer-col-header {
-	color: #eee;
+	color: #fff;
 	text-align: center;
-	margin-top: 0;
+	margin-top: 20px;
 	font-size: 28px;
 	font-weight: 300;
 }

@@ -5,7 +5,7 @@
 <header id="myNavbar">
   <div class="myContainer">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <button type="button" class="navbar-toggle collapsed btn green" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span style=''>Menu</span>
       </button>
@@ -15,10 +15,11 @@
       {% comment %}
       <h1 style='margin-top: 14px; color: white; font-size:28px'><b>SOS</b> Pool Rescue</h1>
       {% endcomment %}
-      <div class='nav_top_row call'>
+      <div class='nav_top_row call callnow_toggle'>
         <div><a id='call' class='btn green' href='tel:{{ company_phone_link }}'>Call Now</a></div>
         <div id='phone'>{{ company_phone_text }}</div>
       </div>
+      {% comment %}
       <div class='nav_top_row contact'>
         <div class="panel-group" id="navbar-contact" role="tablist" aria-multiselectable="true">
           <div role="tab">
@@ -33,6 +34,7 @@
           </div>
         </div>
       </div>
+      {% endcomment %}
     </div>
   </div>
   <div class='myContainer navbar_link_container'>

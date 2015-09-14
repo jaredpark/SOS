@@ -7,7 +7,7 @@
 {% block page_content_block %}
 {% static_placeholder 'main_image' %}
 <h1>Get In Touch Today</h1>
-<div style='text-align: center; overflow: auto'>
+<div style='text-align: center; display: inline-block; width: 100%'>
 	<div class='col-sm-6'>
 		{% if contact_form %}
 			{% include 'contact/contact_form.html' %}
@@ -21,9 +21,11 @@
     	<iframe id='google_map' alt="Google Map" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3327.8048392469145!2d-111.92605619999999!3d33.48043150000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0bdd1ebe096f%3A0x8855dce5e732f312!2s7200+E+Thomas+Rd%2C+Scottsdale%2C+AZ+85251!5e0!3m2!1sen!2sus!4v1432339084425"></iframe>
     </div>
 </div>
-<address class='contact-page'>
-	<p style='font-size:20px'>{{ company_name }}</h4>
-	<p>{{ company_phone_text }}</p>
-	<p>{% include 'misc_pages/email.html' %}</p>
-</address>
+<div>
+	<address class='contact-page'>
+		<p style='font-size:20px'>{{ company_name }}</h4>
+		<p>{{ company_phone_text }}</p>
+		<p>{% include 'misc_pages/email.html' %}</p>
+	</address>
+</div>
 {% endblock page_content_block %}

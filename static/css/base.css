@@ -73,6 +73,7 @@ ul {
 	padding: 10px 20px;
 	font-weight: 300;
 	font-size: 16px;
+
 }
 
 .btn.green:hover, .btn.green:active {
@@ -341,7 +342,7 @@ tr.first td.check {
 }
 
 .homepage_image .btn.green {
-	margin-top: -140px;
+	margin-top: -100px;
 }
 
 #homepage_service_section {
@@ -557,11 +558,7 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	.homepage_image {
 		background-size: contain;
 	}
-	.homepage_image .btn.green {
-		left: 5%;
-		bottom: 20px;
-	}
-
+	
 	#homepage_service_section img {
 		width: 160px;
 	}
@@ -575,6 +572,13 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 }
 
 @media (max-width: 767px) {
+	.btn.green {
+		padding: 6px 12px;
+	}
+	#base_body_wrapper {
+		margin-top: 103px;
+	}
+
 	.one-third-col {
 		width: 95%;
 		margin: 0 auto 15px !important;
@@ -582,10 +586,17 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	.one-third-col.last {
 		margin-bottom: 0 !important;
 	}
+	.callnow_toggle {
+		position: absolute;
+		left: 20px;
+		top: 24px;
+	}
 	.navbar-toggle {
 		position: absolute;
 		right: 20px;
-		top: 18px;
+		top: 24px;
+		margin: 0;
+		z-index: 1000;
 		background: #E4EEFB;
 	}
 	#call {
@@ -608,52 +619,60 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	  margin: 0 auto;
 	  padding-bottom: 10px;
 	}
+	.nav_top_row {
+		text-align: left;
+	}
 	.nav_top_row.logo {
 		width: 100%;
+		z-index: 999;
 	}
-
-	.nav_top_row.call, .nav_top_row.contact {
+/*	.nav_top_row.call, .nav_top_row.contact {
 		width: 50%;
 		text-align: center;
 		margin-bottom:10px;
-	}
-	.homepage_image {
-		height: 320px;
-	}
+	}*/
 	#homepage_service_section img {
 		width: 120px;
+	}
+	.homepage_image .btn.green {
+		margin-top: -55px;
+	}
+	#homepage_under_hero {
+		padding-top: 5px;
 	}
 }
 
 @media (max-width: 480px) {
 	#base_body_wrapper {
-		margin-top: 216px;
+		margin-top: 103px;
 	}
 	.btn.green {
 		padding: 6px 16px;
 		font-size: 14px;
 	}
+	.callnow_toggle {
+		left: 0px;
+		top: 28px;
+	}
 	.navbar-toggle {
-		right: -25px;
-		top: 19px;
+		right: 0px;
+		top: 28px;
 	}
 	#myNavbar .custom-logo img {
-	  margin: 0 0 0 30%;
+	  margin: 0 auto;
 	}
 	.nav_top_row.logo h1 {
 		font-size: 20px !important;
 	}
-	.nav_top_row.call, .nav_top_row.contact {
+	/*.nav_top_row.call, .nav_top_row.contact {
 		margin-top: 10px;
 		width: 100%;
-	}
-	.homepage_image {
-		height: 200px;
-	}
+	}*/
 	.homepage_image .btn.green {
 		left: 5%;
 		bottom: 0px;
 		font-size:12px;
+		margin-top: -48px;
 	}
 	#homepage_service_section img {
 		width: 180px;
@@ -681,5 +700,9 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	.homepage_hero_container {
 		padding-top: 0;
 		padding-bottom: 20px;
+	}
+	.btn.green {
+		padding: 5px 10px;
+		font-size: 12px;
 	}
 }

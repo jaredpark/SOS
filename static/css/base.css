@@ -224,6 +224,14 @@ tr.first td.check {
 		margin: 0 auto -20px;
 		width: 100px;
 	}
+	.half-col {
+		width: 100%;
+		margin: 0;
+	}
+
+	.half-col.last {
+		margin-right: 0;
+	}
 
 }
 
@@ -572,6 +580,9 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 }
 
 @media (max-width: 767px) {
+	.nav_top_row.contact {
+		display: none;
+	}
 	.btn.green {
 		padding: 6px 12px;
 	}
@@ -664,10 +675,6 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	.nav_top_row.logo h1 {
 		font-size: 20px !important;
 	}
-	/*.nav_top_row.call, .nav_top_row.contact {
-		margin-top: 10px;
-		width: 100%;
-	}*/
 	.homepage_image .btn.green {
 		left: 5%;
 		bottom: 0px;

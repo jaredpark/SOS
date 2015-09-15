@@ -277,8 +277,6 @@ tr.first td.check {
 #navbar_links a:hover, #myFooter a:hover, #navbar_links a:active, #myFooter a:active  {
 	color: #2bad74;
 	background: inherit;
-	font-weight: 500;
-	font-size: 18px;
 }
 
 .navbar-header {

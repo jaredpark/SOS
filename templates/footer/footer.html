@@ -4,11 +4,8 @@
 
 <footer id='myFooter' class='page-row'>
 	<div class = 'myContainer'>
-		<div class='col one-third-col first'>
-			<a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
-			<p><a href='tel:{{company_phone_link}}'>{{ company_phone_text }}</a></p>
-			<p>{% include 'misc_pages/email.html' %}</p>
-			<a href="http://www.SurgeSite.com" style='font-size: 12px;'>Created by SurgeSite</a>
+		<div id='footer-contact' class='col one-third-col first'>
+			{% static_placeholder 'quick_contact' %}
 		</div>
 		<div class='col one-third-col'>
 			<h3 class='footer-col-header'>Sitemap</h3>
@@ -16,8 +13,11 @@
 				<ul>{% show_menu 0 100 100 100 %}</ul>
 			</nav>
 		</div>
-		<div id='footer-contact' class='col one-third-col last'>
-			{% static_placeholder 'quick_contact' %}
+		<div class='col one-third-col last'>
+			<a class='custom-logo' href="{% page_url 'home' %}"><img class='img-responsive' src="{% static logo_file_name %}" alt='{{company_name'></a>
+			<p><a href='tel:{{company_phone_link}}'>{{ company_phone_text }}</a></p>
+			<p>{% include 'misc_pages/email.html' %}</p>
+			<a href="http://www.SurgeSite.com" style='font-size: 12px;'>Created by SurgeSite</a>
 		</div>
 	</div>
 </footer>

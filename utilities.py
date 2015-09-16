@@ -31,10 +31,12 @@ def ContactFormProcessor(request, context_dictionary):
 				# from_email = site_settings_processor(request)['site_email']
 				from_email = sender
 				header = 'First name,' + 'CF[Inquiry Type],' + 'Main Phone,' + 'Email,' + 'CF[Message]\n'
-				fullemail = header + first_name + "," + ' - '.join(inquiry_type) + "," + phone + "," + sender + "," + message_body
+				# fullemail = header + first_name + "," + ' - '.join(inquiry_type) + "," + phone + "," + sender + "," + message_body
+				fullemail = first_name + "\n" + ' - '.join(inquiry_type) + "\n" + phone + "\n" + sender + "\n" + message_body
 				time_stamp = str(datetime.datetime.now())
 				# email_object = EmailMessage(subject = 'Website Contact Form', body = message_body, from_email = from_email, to = recipients, attachments = [(time_stamp+'.txt',fullemail,),])
-				email_object = EmailMessage(subject = 'Website Contact Form', body = fullemail, from_email = from_email, to = recipients, attachments = [(time_stamp+'.txt',fullemail,),])
+				# email_object = EmailMessage(subject = 'Website Contact Form', body = fullemail, from_email = from_email, to = recipients, attachments = [(time_stamp+'.txt',fullemail,),])
+				email_object = EmailMessage(subject = 'New Website Contact', body = fullemail, from_email = from_email, to = recipients)
 				email_object.send()
 				context_dictionary['first_name'] = first_name
 			else:

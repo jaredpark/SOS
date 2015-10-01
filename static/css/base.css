@@ -67,7 +67,7 @@ ul {
 }
 
 .btn.green {
-	background-color: #2bad74;
+	background-color: #f78d1d;
 	color: white;
 	border-radius: 0;
 	padding: 10px 20px;
@@ -77,7 +77,7 @@ ul {
 }
 
 .btn.green:hover, .btn.green:active {
-	background-color: #1a9c63;
+	background-color: #e67c0c;
 }
 
 #yelp {
@@ -275,7 +275,7 @@ tr.first td.check {
 }
 
 #navbar_links a:hover, #myFooter a:hover, #navbar_links a:active, #myFooter a:active  {
-	color: #2bad74;
+	color: #f78d1d;
 	background: inherit;
 }
 
@@ -342,7 +342,7 @@ tr.first td.check {
 	position: relative;
 }
 
-.homepage_image>img {
+.homepage_image>.homepage_img {
 	width:100%;
 	max-width: 1800px;
 }
@@ -355,7 +355,7 @@ tr.first td.check {
 
 @media screen and (min-width: 768px) {
   .homepage_img {
-    content:url("/static/images/hero.png");
+  	content:url("/static/images/hero.png");
   }
 }
 
@@ -657,7 +657,7 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 		width: 120px;
 	}
 	.homepage_image .btn.green {
-		margin-top: -55px;
+		margin-top: -65px;
 	}
 	#homepage_under_hero {
 		padding-top: 5px;

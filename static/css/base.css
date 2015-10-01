@@ -13,13 +13,14 @@ body {
 	position: relative;
 	cursor: default;
 	text-rendering: optimizeLegibility;
+	min-height: 100%;
+	display: table-cell;
 	display: flex;
-	min-height: 100vh;
 	flex-direction: column;
 }
 
 .site-content {
-	flex: 1;
+  flex: 1 0 auto;
 }
 
 a {
@@ -425,6 +426,7 @@ tr.first td.check {
 	text-align:center;
 	padding: 25px 0 15px;
 	background-color: #037a8b;
+	overflow: auto;
 }
 
 #myFooter a, #myFooter p {

@@ -347,15 +347,15 @@ tr.first td.check {
 	max-width: 1800px;
 }
 
-@media screen and (max-width: 767px) {
-  .homepage_img {
-    content:url("/static/images/hero_sm.png");
+@media (max-width: 767px) {
+  .homepage_img.big {
+    display: none;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .homepage_img {
-  	content:url("/static/images/hero.png");
+@media (min-width: 768px) {
+  .homepage_img.small {
+  	display: none;
   }
 }
 

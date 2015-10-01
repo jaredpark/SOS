@@ -2,7 +2,7 @@
 {% load static %}
 
 <div class='homepage_image'>
-	<!-- src='{% static 'images/hero.png' %}' -->
-	<div class = 'homepage_img' alt='Relaxing'></div>
+	<img class = 'homepage_img big' alt='Relaxing' src='{% static 'images/hero.png' %}'>
+	<img class = 'homepage_img small' alt='Relaxing' src='{% static 'images/hero_sm.png' %}'>
 	<a class='btn green' href={% page_url 'contact' %}>Schedule My Appointment</a>
 </div>	

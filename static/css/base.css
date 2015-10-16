@@ -275,7 +275,7 @@ tr.first td.check {
 		/*nav bar*/
 
 #myNavbar .custom-logo img {
-	width: 120px;
+	width: 110px;
 	padding-top: 10px;
 	margin: 0 auto;
 }
@@ -742,11 +742,11 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	}
 	.callnow_toggle {
 		left: 0px;
-		top: 28px;
+		top: 34px;
 	}
 	.navbar-toggle {
 		right: 0px;
-		top: 28px;
+		top: 34px;
 	}
 	#myNavbar .custom-logo img {
 	  margin: 0 auto;
@@ -785,14 +785,14 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 366px){
 
 	.homepage_hero_container {
 		padding-top: 0;
 		padding-bottom: 20px;
 	}
 	.btn.green {
-		padding: 5px 10px;
+		padding: 6px 14px;
 		font-size: 12px;
 	}
 }

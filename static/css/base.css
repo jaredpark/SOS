@@ -220,6 +220,18 @@ tr.first td.check {
 	margin: 0 auto -32px;
 }
 
+@media (max-width: 767px) {	
+	.quarter-col {
+		width: 45%;
+		margin: 0 2% 0 2%;
+	}
+	.quart-col.first {
+		margin-left: 2%;
+	}
+	.quarter-col.last {
+		margin-right: 2%;
+	}
+}
 
 @media (max-width: 480px) {
 	table tbody {
@@ -246,7 +258,17 @@ tr.first td.check {
 	.half-col.last {
 		margin-right: 0;
 	}
-
+	.quarter-col {
+		width:90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.quarter-col.first {
+		margin-left: 5%;
+	}
+	.quarter-col.last {
+		margin-right: 5%;
+	}
 }
 
 		/*nav bar*/
@@ -387,8 +409,7 @@ tr.first td.check {
 	width: 90%;
 	max-width: 100px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 10px auto;
 	border-radius: 20px;
 }
 
@@ -631,6 +652,9 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 }
 
 @media (max-width: 767px) {
+	#homepage_service_section {
+	    padding: 10px 0 20px;
+	}
 	.nav_top_row.contact {
 		display: none;
 	}
@@ -703,7 +727,7 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 		margin-top: -65px;
 	}
 	#homepage_under_hero {
-		padding-top: 5px;
+		padding-top: 25px;
 	}
 }
 
@@ -733,12 +757,16 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 		left: 5%;
 		bottom: 0px;
 		font-size:12px;
-		margin-top: -35px;
+		margin-top: -20px;
 	}
 	#homepage_service_section img {
-		width: 180px;
+		width: 120px;
 	}
-	#homepage_under_hero h2 {
+
+	#homepage_service_section h3 {
+		font-size: 20px;
+	}
+	#homepage_under_hero h2, #reviews h2 {
 		font-size: 20px;
 		margin-bottom: 15px;
 	}

@@ -34,7 +34,7 @@ ul {
 .myContainer {
 	width:100%;
 	margin: 0 auto;
-	max-width: 875px;
+	max-width: 1025px;
 }
 
 .row {
@@ -67,8 +67,21 @@ ul {
 	margin: 0 2% 0 3%;
 }
 
+.quarter-col {
+	width: 22%;
+	margin: 0 1% 0 1%;
+}
+
+.quarter-col.first {
+	margin-left: 3%;
+}
+
+.quarter-col.last {
+	margin-right: 3%;
+}
+
 .btn.green {
-	background-color: #f78d1d;
+	background-color: #670897;
 	color: white;
 	border-radius: 0;
 	padding: 10px 20px;
@@ -78,7 +91,7 @@ ul {
 }
 
 .btn.green:hover, .btn.green:active {
-	background-color: #e67c0c;
+	background-color: #7819a8;
 }
 
 #yelp {
@@ -276,7 +289,7 @@ tr.first td.check {
 }
 
 #navbar_links a:hover, #myFooter a:hover, #navbar_links a:active, #myFooter a:active  {
-	color: #f78d1d;
+	color: #670897;
 	background: inherit;
 }
 
@@ -291,7 +304,8 @@ tr.first td.check {
 
 #navbar-contact label, #footer-contact label {
 	color: white;
-	font-weight: 500;
+	font-weight: 300;
+	font-size: 18px;
 }
 
 .nav_top_row {
@@ -364,8 +378,32 @@ tr.first td.check {
 	margin-top: -95px;
 }
 
+#reviews {
+	overflow: hidden;
+	margin: 30px 0 30px;
+}
+
+.review_img img {
+	width: 90%;
+	max-width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}
+
+.review_name p {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#homepage_under_hero {
+	background-color: #f0f2f5;
+}
+
 #homepage_service_section {
-	background-color: #f1f2f2;
+	background-color: #ffffff;
 	padding: 30px 0;
 }
 
@@ -376,12 +414,11 @@ tr.first td.check {
 
 #homepage_service_section a:link, #homepage_service_section a:visited {
 	font-weight: 500;
-	color: #004492;
+	color: #015869;
 }
 
-#homepage_service_section a:hover, #homepage_service_section a:active, {
-	font-weight: 500;
-	color: #ffffff;
+#homepage_service_section a:hover, #homepage_service_section a:active {
+	font-weight: 900;
 }
 
 #homepage_service_section h3 {
@@ -398,7 +435,7 @@ tr.first td.check {
 	padding: 30px 0;
 }
 
-#homepage_under_hero h2 {
+#homepage_under_hero h2, #reviews h2 {
 	font-size: 28px;
 	font-weight: 300;
 	color: #004492;
@@ -490,7 +527,11 @@ address p {
 }
 
 form ul li label {
-	font-weight: 300;
+	font-weight: 500;
+}
+
+.form-control {
+	border-radius: 0 !important;
 }
 
 #contact_form .errorlist {

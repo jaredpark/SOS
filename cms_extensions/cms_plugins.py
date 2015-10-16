@@ -14,4 +14,18 @@ class CMSYelpPlugin(CMSPluginBase):
 			})
 		return context
 
+class CMSReviewPlugin(CMSPluginBase):
+	name = _("Review Plugin")  # Name of the plugin
+	render_template = "cms_extensions/review_plugin.html"  # template to render the plugin with
+
+	def render(self, context, instance, placeholder):
+		request = context['request']
+		context.update({
+			'instance': instance,
+			'placeholder': placeholder,
+			})
+		return context
+
+
 plugin_pool.register_plugin(CMSYelpPlugin)
+plugin_pool.register_plugin(CMSReviewPlugin)

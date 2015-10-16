@@ -34,9 +34,12 @@
 		<div class='page-bottom-contact'>
 			<a class='btn green' href='{% page_url 'contact' %}'>Get in touch today</a>
 		</div>
+		{% include 'misc_pages/reviews.html' %}
+		{% comment %}
 		<div style='margin:20px auto 0;'>
 			<div id='yelpwidget'></div>
 		</div>
+		{% endcomment %}
 	</div>
 </div>
 {% endblock body_block %}

@@ -734,7 +734,7 @@ input.error_field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 
 @media (max-width: 480px) {
 	#base_body_wrapper {
-		margin-top: 103px;
+		margin-top: 110px;
 	}
 	.btn.green {
 		padding: 6px 16px;

@@ -179,12 +179,12 @@ td { padding-left: 5px;}
 }*/
 
 tr:nth-child(even):not(.th_row) {
-    background-color: #f0f0f0;
+    background-color: #f0f8fa;
 }
 
 tbody tr.first td {
-	padding-top: 15px;
-	height: 50px;
+	padding-top: 5px;
+	height: 45px;
 }
 
 .gold_star {
@@ -208,7 +208,7 @@ tbody tr.first td {
 }
 
 tr.first td.check {
-	background: url('../images/check.png') center 23px no-repeat;
+	background: url('../images/check.png') center 15px no-repeat;
 	background-size: 18px 18px;
 }
 
@@ -218,6 +218,7 @@ tr.first td.check {
 
 .icon_header img {
 	margin: 0 auto -32px;
+	width: 120px;
 }
 
 @media (max-width: 767px) {	
